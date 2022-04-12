@@ -4,6 +4,35 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Viator DSP">
   <MAINGROUP id="hgatCz" name="Multi-Q">
     <GROUP id="{5244337E-67A1-F4C5-25A2-8EC35329EDEC}" name="Source">
+      <GROUP id="{5D1B686E-516F-6F7D-6CEC-3FB6814A4BD3}" name="UI-Methods">
+        <FILE id="kQV2sK" name="OversamplingMenu.cpp" compile="1" resource="0"
+              file="Source/UI-Methods/OversamplingMenu.cpp"/>
+        <FILE id="IQRenu" name="UI-Constructor.cpp" compile="1" resource="0"
+              file="Source/UI-Methods/UI-Constructor.cpp"/>
+        <FILE id="DdNEVt" name="UI-InitWindow.cpp" compile="1" resource="0"
+              file="Source/UI-Methods/UI-InitWindow.cpp"/>
+        <FILE id="SfdlYt" name="UI-Paint.cpp" compile="1" resource="0" file="Source/UI-Methods/UI-Paint.cpp"/>
+        <FILE id="geGhG9" name="UI-Resized.cpp" compile="1" resource="0" file="Source/UI-Methods/UI-Resized.cpp"/>
+        <FILE id="bhq06i" name="UI-SaveWindow.cpp" compile="1" resource="0"
+              file="Source/UI-Methods/UI-SaveWindow.cpp"/>
+      </GROUP>
+      <GROUP id="{2084F1C3-B299-FB83-B48A-DD0614BCA379}" name="Assets">
+        <FILE id="T95urM" name="dark_blue.png" compile="0" resource="1" file="Source/Assets/dark_blue.png"/>
+        <FILE id="jLUgI4" name="landon55-03.png" compile="0" resource="1" file="Source/Assets/landon55-03.png"/>
+        <FILE id="ekn6C1" name="landon55-04.png" compile="0" resource="1" file="Source/Assets/landon55-04.png"/>
+        <FILE id="c3gMuA" name="oscilloscope-01.png" compile="0" resource="1"
+              file="Source/Assets/oscilloscope-01.png"/>
+        <FILE id="ibzyxs" name="pluginBackground.png" compile="0" resource="1"
+              file="Source/Assets/pluginBackground.png"/>
+        <FILE id="iIS8oN" name="pluginBackground2.png" compile="0" resource="1"
+              file="Source/Assets/pluginBackground2.png"/>
+        <FILE id="cWzOVI" name="testTexture.png" compile="0" resource="1" file="Source/Assets/testTexture.png"/>
+        <FILE id="VBO2Fz" name="TEXTURE5.png" compile="0" resource="1" file="Source/Assets/TEXTURE5.png"/>
+      </GROUP>
+      <GROUP id="{CE34EEC1-0872-E4B4-4BCC-60D6EDE88B9E}" name="UI-Components">
+        <FILE id="CiIJyD" name="LV_Window.cpp" compile="1" resource="0" file="Source/UI-Components/LV_Window.cpp"/>
+        <FILE id="RVIlZg" name="LV_Window.h" compile="0" resource="0" file="Source/UI-Components/LV_Window.h"/>
+      </GROUP>
       <FILE id="O8roDG" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="RRKJzz" name="PluginProcessor.h" compile="0" resource="0"

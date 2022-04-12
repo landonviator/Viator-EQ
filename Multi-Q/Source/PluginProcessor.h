@@ -13,7 +13,7 @@
 //==============================================================================
 /**
 */
-class MultiQAudioProcessor  : public juce::AudioProcessor
+class MultiQAudioProcessor  : public juce::AudioProcessor, juce::AudioProcessorValueTreeState::Listener
 {
 public:
     //==============================================================================
@@ -52,8 +52,30 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
+    
+    juce::AudioProcessorValueTreeState treeState;
+    
+    juce::ValueTree variableTree
+    { "Variables", {},
+        {
+        { "Group", {{ "name", "Vars" }},
+            {
+                { "Parameter", {{ "id", "width" }, { "value", 0.0 }}},
+                { "Parameter", {{ "id", "height" }, { "value", 0.0 }}},
+            }
+        }
+        }
+    };
+    
+    /** Window Vars =====================================================*/
+    float windowWidth {0.0f};
+    float windowHeight {0.0f};
 
 private:
+    
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
+    void parameterChanged (const juce::String& parameterID, float newValue) override;
+    
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessor)
 };

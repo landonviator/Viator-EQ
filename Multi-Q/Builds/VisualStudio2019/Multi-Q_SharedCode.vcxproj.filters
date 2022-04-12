@@ -2,6 +2,15 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Multi-Q\Source\UI-Methods">
+      <UniqueIdentifier>{44017B2B-C0A3-57DD-08F9-DC2C106AC655}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Multi-Q\Source\Assets">
+      <UniqueIdentifier>{A09A315B-9CAF-7189-75FB-3CC891A2C6C7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Multi-Q\Source\UI-Components">
+      <UniqueIdentifier>{1B145CA5-1521-18CE-E9FE-65338E8718D4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Multi-Q\Source">
       <UniqueIdentifier>{6B3C6F7E-4884-AE1F-9AB5-F57C38781A9E}</UniqueIdentifier>
     </Filter>
@@ -487,6 +496,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\UI-Methods\OversamplingMenu.cpp">
+      <Filter>Multi-Q\Source\UI-Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UI-Methods\UI-Constructor.cpp">
+      <Filter>Multi-Q\Source\UI-Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UI-Methods\UI-InitWindow.cpp">
+      <Filter>Multi-Q\Source\UI-Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UI-Methods\UI-Paint.cpp">
+      <Filter>Multi-Q\Source\UI-Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UI-Methods\UI-Resized.cpp">
+      <Filter>Multi-Q\Source\UI-Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UI-Methods\UI-SaveWindow.cpp">
+      <Filter>Multi-Q\Source\UI-Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UI-Components\LV_Window.cpp">
+      <Filter>Multi-Q\Source\UI-Components</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp">
       <Filter>Multi-Q\Source</Filter>
     </ClCompile>
@@ -2713,6 +2743,21 @@
     <ClCompile Include="..\..\..\..\viatordsp\viator_modules\viator_modules.cpp">
       <Filter>JUCE Modules\viator_modules</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp">
+      <Filter>JUCE Library Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData2.cpp">
+      <Filter>JUCE Library Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData3.cpp">
+      <Filter>JUCE Library Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData4.cpp">
+      <Filter>JUCE Library Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData5.cpp">
+      <Filter>JUCE Library Code</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_basics.cpp">
       <Filter>JUCE Library Code</Filter>
     </ClCompile>
@@ -2757,6 +2802,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\UI-Components\LV_Window.h">
+      <Filter>Multi-Q\Source\UI-Components</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\PluginProcessor.h">
       <Filter>Multi-Q\Source</Filter>
     </ClInclude>
@@ -5370,6 +5418,9 @@
     <ClInclude Include="..\..\..\..\viatordsp\viator_modules\viator_modules.h">
       <Filter>JUCE Modules\viator_modules</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\BinaryData.h">
+      <Filter>JUCE Library Code</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h">
       <Filter>JUCE Library Code</Filter>
     </ClInclude>
@@ -5378,6 +5429,30 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Source\Assets\dark_blue.png">
+      <Filter>Multi-Q\Source\Assets</Filter>
+    </None>
+    <None Include="..\..\Source\Assets\landon55-03.png">
+      <Filter>Multi-Q\Source\Assets</Filter>
+    </None>
+    <None Include="..\..\Source\Assets\landon55-04.png">
+      <Filter>Multi-Q\Source\Assets</Filter>
+    </None>
+    <None Include="..\..\Source\Assets\oscilloscope-01.png">
+      <Filter>Multi-Q\Source\Assets</Filter>
+    </None>
+    <None Include="..\..\Source\Assets\pluginBackground.png">
+      <Filter>Multi-Q\Source\Assets</Filter>
+    </None>
+    <None Include="..\..\Source\Assets\pluginBackground2.png">
+      <Filter>Multi-Q\Source\Assets</Filter>
+    </None>
+    <None Include="..\..\Source\Assets\testTexture.png">
+      <Filter>Multi-Q\Source\Assets</Filter>
+    </None>
+    <None Include="..\..\Source\Assets\TEXTURE5.png">
+      <Filter>Multi-Q\Source\Assets</Filter>
+    </None>
     <None Include="C:\JUCE\modules\juce_audio_devices\native\oboe\CMakeLists.txt">
       <Filter>JUCE Modules\juce_audio_devices\native\oboe</Filter>
     </None>

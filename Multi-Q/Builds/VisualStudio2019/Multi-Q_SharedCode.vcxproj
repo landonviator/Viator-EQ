@@ -137,6 +137,13 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\UI-Methods\OversamplingMenu.cpp"/>
+    <ClCompile Include="..\..\Source\UI-Methods\UI-Constructor.cpp"/>
+    <ClCompile Include="..\..\Source\UI-Methods\UI-InitWindow.cpp"/>
+    <ClCompile Include="..\..\Source\UI-Methods\UI-Paint.cpp"/>
+    <ClCompile Include="..\..\Source\UI-Methods\UI-Resized.cpp"/>
+    <ClCompile Include="..\..\Source\UI-Methods\UI-SaveWindow.cpp"/>
+    <ClCompile Include="..\..\Source\UI-Components\LV_Window.cpp"/>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp"/>
     <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
     <ClCompile Include="C:\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
@@ -2230,6 +2237,11 @@
     <ClCompile Include="..\..\..\..\viatordsp\viator_modules\viator_modules.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp"/>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData2.cpp"/>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData3.cpp"/>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData4.cpp"/>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData5.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_basics.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_devices.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_formats.cpp"/>
@@ -2248,6 +2260,7 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_viator_modules.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\UI-Components\LV_Window.h"/>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>
@@ -3119,10 +3132,19 @@
     <ClInclude Include="..\..\..\..\viatordsp\viator_modules\viator_gui\Widgets\Toggle.h"/>
     <ClInclude Include="..\..\..\..\viatordsp\viator_modules\viator_utils\utils.h"/>
     <ClInclude Include="..\..\..\..\viatordsp\viator_modules\viator_modules.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\BinaryData.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\JucePluginDefines.h"/>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Source\Assets\dark_blue.png"/>
+    <None Include="..\..\Source\Assets\landon55-03.png"/>
+    <None Include="..\..\Source\Assets\landon55-04.png"/>
+    <None Include="..\..\Source\Assets\oscilloscope-01.png"/>
+    <None Include="..\..\Source\Assets\pluginBackground.png"/>
+    <None Include="..\..\Source\Assets\pluginBackground2.png"/>
+    <None Include="..\..\Source\Assets\testTexture.png"/>
+    <None Include="..\..\Source\Assets\TEXTURE5.png"/>
     <None Include="C:\JUCE\modules\juce_audio_devices\native\oboe\CMakeLists.txt"/>
     <None Include="C:\JUCE\modules\juce_audio_devices\native\oboe\README.md"/>
     <None Include="C:\JUCE\modules\juce_audio_formats\codecs\flac\Flac Licence.txt"/>
