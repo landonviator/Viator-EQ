@@ -143,7 +143,10 @@
     <ClCompile Include="..\..\Source\UI-Methods\UI-Paint.cpp"/>
     <ClCompile Include="..\..\Source\UI-Methods\UI-Resized.cpp"/>
     <ClCompile Include="..\..\Source\UI-Methods\UI-SaveWindow.cpp"/>
+    <ClCompile Include="..\..\Source\UI-Components\GraphicEQComponent.cpp"/>
     <ClCompile Include="..\..\Source\UI-Components\LV_Window.cpp"/>
+    <ClCompile Include="..\..\Source\TubeEQComponent.cpp"/>
+    <ClCompile Include="..\..\Source\UI-Components\ParametricEQComponent.cpp"/>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp"/>
     <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
     <ClCompile Include="C:\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
@@ -2260,7 +2263,10 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_viator_modules.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\UI-Components\GraphicEQComponent.h"/>
     <ClInclude Include="..\..\Source\UI-Components\LV_Window.h"/>
+    <ClInclude Include="..\..\Source\TubeEQComponent.h"/>
+    <ClInclude Include="..\..\Source\UI-Components\ParametricEQComponent.h"/>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>

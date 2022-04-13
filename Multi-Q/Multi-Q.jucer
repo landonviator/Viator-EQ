@@ -30,8 +30,20 @@
         <FILE id="VBO2Fz" name="TEXTURE5.png" compile="0" resource="1" file="Source/Assets/TEXTURE5.png"/>
       </GROUP>
       <GROUP id="{CE34EEC1-0872-E4B4-4BCC-60D6EDE88B9E}" name="UI-Components">
+        <FILE id="Q4Rv6B" name="GraphicEQComponent.cpp" compile="1" resource="0"
+              file="Source/UI-Components/GraphicEQComponent.cpp"/>
+        <FILE id="fBoeIA" name="GraphicEQComponent.h" compile="0" resource="0"
+              file="Source/UI-Components/GraphicEQComponent.h"/>
         <FILE id="CiIJyD" name="LV_Window.cpp" compile="1" resource="0" file="Source/UI-Components/LV_Window.cpp"/>
         <FILE id="RVIlZg" name="LV_Window.h" compile="0" resource="0" file="Source/UI-Components/LV_Window.h"/>
+        <FILE id="vycG4G" name="TubeEQComponent.cpp" compile="1" resource="0"
+              file="Source/TubeEQComponent.cpp"/>
+        <FILE id="zcF9wU" name="TubeEQComponent.h" compile="0" resource="0"
+              file="Source/TubeEQComponent.h"/>
+        <FILE id="RNIwX5" name="ParametricEQComponent.cpp" compile="1" resource="0"
+              file="Source/UI-Components/ParametricEQComponent.cpp"/>
+        <FILE id="GT2P57" name="ParametricEQComponent.h" compile="0" resource="0"
+              file="Source/UI-Components/ParametricEQComponent.h"/>
       </GROUP>
       <FILE id="O8roDG" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>

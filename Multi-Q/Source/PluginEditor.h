@@ -10,6 +10,7 @@
 
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "./UI-Components/GraphicEQComponent.h"
 
 //==============================================================================
 /**
@@ -29,13 +30,19 @@ private:
     // access the processor object that created it.
     MultiQAudioProcessor& audioProcessor;
     
+    /** Boiler plate UI stuff */
     void uiConstructor();
     void initWindow();
     void uiPaint(juce::Graphics &g);
     void uiResized();
     void saveWindowSize();
-    
     bool constructorFinished = false;
+    
+    /** Global EQ Choices*/
+    viator_gui::PushButton graphicEQButton, paraEQButton, tubeEQButton;
+    
+    /** Graphic EQ*/
+    GraphicEQComponent graphicEQComponent;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessorEditor)
 };
