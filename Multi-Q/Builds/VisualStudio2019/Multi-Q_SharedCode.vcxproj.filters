@@ -514,6 +514,9 @@
     <ClCompile Include="..\..\Source\UI-Methods\UI-SaveWindow.cpp">
       <Filter>Multi-Q\Source\UI-Methods</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\UI-Components\OutputComponent.cpp">
+      <Filter>Multi-Q\Source\UI-Components</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\UI-Components\GraphicEQComponent.cpp">
       <Filter>Multi-Q\Source\UI-Components</Filter>
     </ClCompile>
@@ -2811,6 +2814,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\UI-Components\OutputComponent.h">
+      <Filter>Multi-Q\Source\UI-Components</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\UI-Components\GraphicEQComponent.h">
       <Filter>Multi-Q\Source\UI-Components</Filter>
     </ClInclude>

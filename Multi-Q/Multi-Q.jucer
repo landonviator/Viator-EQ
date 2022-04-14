@@ -30,6 +30,10 @@
         <FILE id="VBO2Fz" name="TEXTURE5.png" compile="0" resource="1" file="Source/Assets/TEXTURE5.png"/>
       </GROUP>
       <GROUP id="{CE34EEC1-0872-E4B4-4BCC-60D6EDE88B9E}" name="UI-Components">
+        <FILE id="sANDPN" name="OutputComponent.cpp" compile="1" resource="0"
+              file="Source/UI-Components/OutputComponent.cpp"/>
+        <FILE id="UaGujW" name="OutputComponent.h" compile="0" resource="0"
+              file="Source/UI-Components/OutputComponent.h"/>
         <FILE id="Q4Rv6B" name="GraphicEQComponent.cpp" compile="1" resource="0"
               file="Source/UI-Components/GraphicEQComponent.cpp"/>
         <FILE id="fBoeIA" name="GraphicEQComponent.h" compile="0" resource="0"

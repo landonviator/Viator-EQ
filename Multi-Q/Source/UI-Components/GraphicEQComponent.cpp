@@ -33,14 +33,13 @@ GraphicEQComponent::~GraphicEQComponent()
 
 void GraphicEQComponent::paint (juce::Graphics& g)
 {
-    
 }
 
 void GraphicEQComponent::resized()
 {
-    auto leftMargin = getWidth() * 0.1;
-    auto topMargin = getHeight() * 0.12;
-    auto faderheight = getHeight() * 0.28;
+    auto leftMargin = 0;
+    auto topMargin = 24;
+    auto faderheight = getHeight() * 0.41;
     auto faderWidth = faderheight * 0.65;
 
     band1.setBounds(leftMargin, topMargin, faderWidth, faderheight);
@@ -49,7 +48,7 @@ void GraphicEQComponent::resized()
     band4.setBounds(band3.getX() + band3.getWidth(), topMargin, faderWidth, faderheight);
     band5.setBounds(band4.getX() + band4.getWidth(), topMargin, faderWidth, faderheight);
     
-    auto bottomMargin = band4.getY() + band4.getHeight() * 1.25;
+    auto bottomMargin = band4.getY() + band4.getHeight() * 1.2;
     
     band6.setBounds(band1.getX(), bottomMargin, faderWidth, faderheight);
     band7.setBounds(band2.getX(), bottomMargin, faderWidth, faderheight);

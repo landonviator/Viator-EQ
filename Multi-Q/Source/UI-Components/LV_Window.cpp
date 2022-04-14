@@ -22,21 +22,28 @@ LV_Window::~LV_Window()
 
 void LV_Window::paint (juce::Graphics& g)
 {
-    
-    background = juce::ImageCache::getFromMemory(BinaryData::dark_blue_png, BinaryData::dark_blue_pngSize);
+    // Background
+    auto background = juce::ImageCache::getFromMemory(BinaryData::pluginBackground2_png, BinaryData::pluginBackground2_pngSize);
     g.drawImageWithin(background, 0, 0, getWidth(), getHeight(), juce::RectanglePlacement::stretchToFit);
     
-//    juce::Rectangle<int> background = getBounds();
-//    g.setGradientFill(juce::ColourGradient::vertical(juce::Colour::fromFloatRGBA(0.18f, 0.20f, 0.24f, 1.0), height * .25, juce::Colour::fromFloatRGBA(0.12f, 0.14f, 0.18f, 1.0), height * .99));
-//    g.fillRect(background);
+    // Logo layer
+    auto footerLogo = juce::ImageCache::getFromMemory(BinaryData::landon5504_png, BinaryData::landon5504_pngSize);
+    
+    // Draw and position the image
+    g.drawImageWithin(footerLogo, getWidth() * 0.38, getHeight() * 0.8 + 4, getWidth() * 0.25, getHeight() * 0.1, juce::RectanglePlacement::centred);
+    
+    // Patreon link
+    mWebLink.setURL(mWebUrl);
+    addAndMakeVisible(mWebLink);
+    mWebLink.setBounds(getWidth() * 0.38, getHeight() * 0.8 + 4, getWidth() * 0.25, getHeight() * 0.1);
+    
+    // Plugin text
+    g.setColour (juce::Colours::whitesmoke.withAlpha(0.125f));
+    g.setFont(getWidth() * 0.015);
+    g.drawFittedText ("Multi-Q v1.1.1", getWidth() * 0.12, getHeight() * 0.84, getWidth(), getHeight(), juce::Justification::topLeft, 1);
 }
 
 void LV_Window::resized()
 {
 }
 
-void LV_Window::setWidthAndHeight(float w, float h)
-{
-    width = w;
-    height = h;
-}

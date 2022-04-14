@@ -23,16 +23,11 @@ public:
 
     void paint (juce::Graphics&) override;
     void resized() override;
-    void setWidthAndHeight(float w, float h);
     
 private:
     
-    juce::Image background;
-    
-    /** Vars ==================================================================*/
-    float width {0.0f};
-    float height {0.0f};
-    bool paintInitialized = false;
+    juce::HyperlinkButton mWebLink;
+    juce::URL mWebUrl {"https://www.patreon.com/ViatorDSP"};
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (LV_Window)
 };

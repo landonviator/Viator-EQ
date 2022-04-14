@@ -10,7 +10,9 @@
 
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "./UI-Components/LV_Window.h"
 #include "./UI-Components/GraphicEQComponent.h"
+#include "./UI-Components/OutputComponent.h"
 
 //==============================================================================
 /**
@@ -38,8 +40,11 @@ private:
     void saveWindowSize();
     bool constructorFinished = false;
     
-    /** Global EQ Choices*/
-    viator_gui::PushButton graphicEQButton, paraEQButton, tubeEQButton;
+    /** Window */
+    LV_Window windowComponent;
+    
+    /** Output */
+    OutputComponent outputComponent;
     
     /** Graphic EQ*/
     GraphicEQComponent graphicEQComponent;

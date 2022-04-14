@@ -143,6 +143,7 @@
     <ClCompile Include="..\..\Source\UI-Methods\UI-Paint.cpp"/>
     <ClCompile Include="..\..\Source\UI-Methods\UI-Resized.cpp"/>
     <ClCompile Include="..\..\Source\UI-Methods\UI-SaveWindow.cpp"/>
+    <ClCompile Include="..\..\Source\UI-Components\OutputComponent.cpp"/>
     <ClCompile Include="..\..\Source\UI-Components\GraphicEQComponent.cpp"/>
     <ClCompile Include="..\..\Source\UI-Components\LV_Window.cpp"/>
     <ClCompile Include="..\..\Source\TubeEQComponent.cpp"/>
@@ -2263,6 +2264,7 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_viator_modules.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\UI-Components\OutputComponent.h"/>
     <ClInclude Include="..\..\Source\UI-Components\GraphicEQComponent.h"/>
     <ClInclude Include="..\..\Source\UI-Components\LV_Window.h"/>
     <ClInclude Include="..\..\Source\TubeEQComponent.h"/>
