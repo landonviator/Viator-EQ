@@ -29,5 +29,9 @@ private:
     juce::HyperlinkButton mWebLink;
     juce::URL mWebUrl {"https://www.patreon.com/ViatorDSP"};
     
+    viator_gui::Toggle phaseToggle {""};
+    viator_gui::Menu osMenu;
+    viator_gui::Menu stereoMenu;
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (LV_Window)
 };

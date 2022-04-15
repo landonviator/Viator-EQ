@@ -21,8 +21,23 @@ void MultiQAudioProcessorEditor::uiResized()
     // Graphic EQ Component
     graphicEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
     
+    // Parametric EQ
+    parametricEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    
     // Output
-    outputComponent.setBounds(leftMargin + getWidth() * 0.55, topMargin, getWidth() * 0.5, getHeight() * 0.7);
+    auto leftOutputMargin = getWidth() * 0.66;
+    auto topOutputMargin = getHeight() * 0.12;
+    auto faderheight = getHeight() * 0.55;
+    auto faderWidth = faderheight * 0.4;
+    auto buttonWidth = getWidth() * 0.08;
+    auto buttonheight = buttonWidth * 0.33;
+    
+    driveFader.setBounds(leftOutputMargin, topOutputMargin, faderWidth, faderheight);
+    trimFader.setBounds(driveFader.getX() + driveFader.getWidth() * 1.25, topOutputMargin, faderWidth, faderheight);
+    
+    graphicEQButton.setBounds(driveFader.getX(), driveFader.getY() + driveFader.getHeight(), buttonWidth, buttonheight);
+    paraEQButton.setBounds(graphicEQButton.getX() + graphicEQButton.getWidth(), driveFader.getY() + driveFader.getHeight(), buttonWidth, buttonheight);
+    tubeEQButton.setBounds(paraEQButton.getX() + paraEQButton.getWidth(), driveFader.getY() + driveFader.getHeight(), buttonWidth, buttonheight);
     
     // Save plugin size in the tree
     saveWindowSize();

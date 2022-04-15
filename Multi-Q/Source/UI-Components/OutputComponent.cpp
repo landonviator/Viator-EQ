@@ -22,6 +22,10 @@ OutputComponent::OutputComponent()
     addAndMakeVisible(graphicEQButton);
     graphicEQButton.setButtonText("Graphic");
     graphicEQButton.setRadioGroupId(1);
+    graphicEQButton.onStateChange = [this]()
+    {
+        
+    };
     
     addAndMakeVisible(paraEQButton);
     paraEQButton.setButtonText("Parametric");

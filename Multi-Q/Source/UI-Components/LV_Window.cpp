@@ -14,6 +14,19 @@
 //==============================================================================
 LV_Window::LV_Window()
 {
+    addAndMakeVisible(phaseToggle);
+    phaseToggle.setToggleStyle(viator_gui::Toggle::ToggleStyle::kPhase);
+    
+    addAndMakeVisible(osMenu);
+    osMenu.setText("Quality");
+    osMenu.addItem("Normal", 1);
+    osMenu.addItem("High", 2);
+    
+    addAndMakeVisible(stereoMenu);
+    stereoMenu.setText("M / S");
+    stereoMenu.addItem("Stereo", 1);
+    stereoMenu.addItem("Mid", 2);
+    stereoMenu.addItem("Sides", 3);
 }
 
 LV_Window::~LV_Window()
@@ -45,5 +58,12 @@ void LV_Window::paint (juce::Graphics& g)
 
 void LV_Window::resized()
 {
+    auto buttonSize = getWidth() * 0.05;
+    auto menuWidth = getWidth() * 0.1;
+    auto menuHeight = menuWidth * 0.33;
+    
+    phaseToggle.setBounds(getWidth() * 0.65, getHeight() * 0.81, buttonSize, buttonSize);
+    osMenu.setBounds(phaseToggle.getX() + phaseToggle.getWidth(), phaseToggle.getY() * 1.02, menuWidth, menuHeight);
+    stereoMenu.setBounds(osMenu.getX() + osMenu.getWidth(), osMenu.getY(), menuWidth, menuHeight);
 }
 

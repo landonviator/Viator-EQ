@@ -13,6 +13,7 @@
 #include "./UI-Components/LV_Window.h"
 #include "./UI-Components/GraphicEQComponent.h"
 #include "./UI-Components/OutputComponent.h"
+#include "./UI-Components/ParametricEQComponent.h"
 
 //==============================================================================
 /**
@@ -27,6 +28,7 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
 
+    
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
@@ -43,11 +45,21 @@ private:
     /** Window */
     LV_Window windowComponent;
     
-    /** Output */
-    OutputComponent outputComponent;
-    
     /** Graphic EQ*/
     GraphicEQComponent graphicEQComponent;
+    
+    /** Parametric EQ*/
+    ParametricEQComponent parametricEQComponent;
+    
+    viator_gui::Fader driveFader {" dB", "Drive", 0.0, 12.0, 0.01, 0.0};
+    viator_gui::Fader trimFader {" dB", "Trim", -12.0, 12.0, 0.01, 0.0};
+    
+    viator_gui::Toggle phaseToggle {""};
+    
+    viator_gui::PushButton graphicEQButton;
+    viator_gui::PushButton paraEQButton;
+    viator_gui::PushButton tubeEQButton;
+    
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessorEditor)
 };

@@ -29,6 +29,7 @@ GraphicEQComponent::GraphicEQComponent()
 
 GraphicEQComponent::~GraphicEQComponent()
 {
+    DBG("Destroyed");
 }
 
 void GraphicEQComponent::paint (juce::Graphics& g)
@@ -40,7 +41,7 @@ void GraphicEQComponent::resized()
     auto leftMargin = 0;
     auto topMargin = 24;
     auto faderheight = getHeight() * 0.41;
-    auto faderWidth = faderheight * 0.65;
+    auto faderWidth = faderheight * 0.8;
 
     band1.setBounds(leftMargin, topMargin, faderWidth, faderheight);
     band2.setBounds(band1.getX() + band1.getWidth(), topMargin, faderWidth, faderheight);
