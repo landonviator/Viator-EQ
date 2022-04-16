@@ -4,6 +4,10 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Viator DSP">
   <MAINGROUP id="hgatCz" name="Multi-Q">
     <GROUP id="{5244337E-67A1-F4C5-25A2-8EC35329EDEC}" name="Source">
+      <GROUP id="{15B15F08-22BA-E8AC-BBAB-0D2466C2ACFB}" name="Parameters">
+        <FILE id="boxGBr" name="Parameters.cpp" compile="1" resource="0" file="Source/Parameters/Parameters.cpp"/>
+        <FILE id="bTZHa6" name="Parameters.h" compile="0" resource="0" file="Source/Parameters/Parameters.h"/>
+      </GROUP>
       <GROUP id="{E3FC2293-AF2F-1591-2990-C204E53C0579}" name="GraphicEQ">
         <FILE id="IQbCPk" name="GraphicEQ.cpp" compile="1" resource="0" file="Source/GraphicEQ/GraphicEQ.cpp"/>
       </GROUP>
@@ -14,7 +18,6 @@
       <GROUP id="{1D252C92-7EC2-B1C9-DB81-0E9D18D9DF71}" name="TubeEQ">
         <FILE id="R0vf4Z" name="TubeEQ.cpp" compile="1" resource="0" file="Source/TubeEQ/TubeEQ.cpp"/>
       </GROUP>
-      <FILE id="HgRcsr" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
       <GROUP id="{9230D3AD-D5F3-5387-EA55-4643B342ECE6}" name="DSP">
         <FILE id="RjuITb" name="GraphicEQ.cpp" compile="1" resource="0" file="Source/DSP/GraphicEQ.cpp"/>
         <FILE id="tGZdJN" name="GraphicEQ.h" compile="0" resource="0" file="Source/DSP/GraphicEQ.h"/>

@@ -2,6 +2,9 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Multi-Q\Source\Parameters">
+      <UniqueIdentifier>{4241D25C-A346-0910-362F-C806356DAAC4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Multi-Q\Source\GraphicEQ">
       <UniqueIdentifier>{42A179B9-940C-3AC6-77FA-5AEBDBB7CB3E}</UniqueIdentifier>
     </Filter>
@@ -508,6 +511,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Parameters\Parameters.cpp">
+      <Filter>Multi-Q\Source\Parameters</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GraphicEQ\GraphicEQ.cpp">
       <Filter>Multi-Q\Source\GraphicEQ</Filter>
     </ClCompile>
@@ -2844,8 +2850,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\Parameters.h">
-      <Filter>Multi-Q\Source</Filter>
+    <ClInclude Include="..\..\Source\Parameters\Parameters.h">
+      <Filter>Multi-Q\Source\Parameters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\DSP\GraphicEQ.h">
       <Filter>Multi-Q\Source\DSP</Filter>

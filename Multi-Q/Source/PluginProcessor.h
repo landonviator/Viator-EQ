@@ -12,7 +12,7 @@
 #include "./DSP/GraphicEQ.h"
 #include "./DSP/ParametricEQ.h"
 #include "./DSP/TubeEQ.h"
-#include "Parameters.h"
+#include "./Parameters/Parameters.h"
 
 //==============================================================================
 /**
@@ -83,6 +83,8 @@ private:
     /** DSP */
     juce::dsp::Oversampling<float> oversamplingModule;
     juce::dsp::ProcessSpec spec;
+    void updateCommonParameters();
+    bool osToggle = false;
     
     GraphicEQ<float> graphicEQModule;
     void updateGraphicParameters();

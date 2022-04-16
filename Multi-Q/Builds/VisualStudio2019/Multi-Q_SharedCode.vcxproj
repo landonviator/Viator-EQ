@@ -137,6 +137,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Parameters\Parameters.cpp"/>
     <ClCompile Include="..\..\Source\GraphicEQ\GraphicEQ.cpp"/>
     <ClCompile Include="..\..\Source\ParametricEQ\ParametricEQ.cpp"/>
     <ClCompile Include="..\..\Source\TubeEQ\TubeEQ.cpp"/>
@@ -2270,7 +2271,7 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_viator_modules.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\Parameters.h"/>
+    <ClInclude Include="..\..\Source\Parameters\Parameters.h"/>
     <ClInclude Include="..\..\Source\DSP\GraphicEQ.h"/>
     <ClInclude Include="..\..\Source\DSP\ParametricEQ.h"/>
     <ClInclude Include="..\..\Source\DSP\TubeEQ.h"/>

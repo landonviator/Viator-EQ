@@ -138,7 +138,26 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
 
 void MultiQAudioProcessor::parameterChanged(const juce::String &parameterID, float newValue)
 {
+    if (parameterID == qualityID)
+    {
+        osToggle = static_cast<bool>(treeState.getRawParameterValue(qualityID)->load());
+            
+        // Adjust samplerate of filters when oversampling
+        if (osToggle)
+        {
+            spec.sampleRate = getSampleRate() * oversamplingModule.getOversamplingFactor();
+            graphicEQModule.prepare(spec);
+        }
+
+        else
+        {
+            spec.sampleRate = getSampleRate();
+            graphicEQModule.prepare(spec);
+        }
+    }
+    
     updateGraphicParameters();
+    updateCommonParameters();
 }
 
 //==============================================================================
@@ -210,6 +229,19 @@ void MultiQAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock
     oversamplingModule.initProcessing(samplesPerBlock);
     oversamplingModule.reset();
     
+    updateCommonParameters();
+    
+    // Adjust samplerate of filters when oversampling
+    if (osToggle)
+    {
+        spec.sampleRate = getSampleRate() * oversamplingModule.getOversamplingFactor();
+    }
+
+    else
+    {
+        spec.sampleRate = getSampleRate();
+    }
+    
     // Initialize spec for dsp modules
     spec.maximumBlockSize = samplesPerBlock;
     spec.sampleRate = sampleRate;
@@ -221,8 +253,7 @@ void MultiQAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock
 
 void MultiQAudioProcessor::releaseResources()
 {
-    // When playback stops, you can use this as an opportunity to free up any
-    // spare memory, etc.
+    oversamplingModule.reset();
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
@@ -254,12 +285,23 @@ bool MultiQAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) c
 void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
     juce::ScopedNoDenormals noDenormals;
-    auto totalNumInputChannels  = getTotalNumInputChannels();
-    auto totalNumOutputChannels = getTotalNumOutputChannels();
-
-    juce::dsp::AudioBlock<float> audioBlock {buffer};
     
-    graphicEQModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
+    juce::dsp::AudioBlock<float> block (buffer);
+    juce::dsp::AudioBlock<float> upSampledBlock (buffer);
+
+    // Oversample if ON
+    if (osToggle)
+    {
+        upSampledBlock = oversamplingModule.processSamplesUp(block);
+        graphicEQModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
+        oversamplingModule.processSamplesDown(block);
+    }
+
+    // Don't Oversample if OFF
+    else
+    {
+        graphicEQModule.process(juce::dsp::ProcessContextReplacing<float>(block));
+    }
 }
 
 //==============================================================================
@@ -297,6 +339,7 @@ void MultiQAudioProcessor::setStateInformation (const void* data, int sizeInByte
         windowWidth = variableTree.getProperty("width");
         windowHeight = variableTree.getProperty("height");
         
+        updateCommonParameters();
         updateGraphicParameters();
     }
 }
