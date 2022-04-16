@@ -90,6 +90,9 @@ private:
     GraphicEQ<float> graphicEQModule;
     void updateGraphicParameters();
     
+    ParametricEQ<float> parametricEQModule;
+    void updateParametricParameters();
+    
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessor)
 };

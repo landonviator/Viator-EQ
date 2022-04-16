@@ -30,6 +30,31 @@
 #define graphicFilter10GainID  "graphic eq band 10 gain"
 #define graphicFilter10GainName  "G EQ 10 Gain"
 
+#define parametricFilter1GainID  "parametric eq band 1 gain"
+#define parametricFilter1GainName  "P EQ 1 Gain"
+
+#define parametricFilter2GainID  "parametric eq band 2 gain"
+#define parametricFilter2GainName  "P EQ 2 Gain"
+
+#define parametricFilter3GainID  "parametric eq band 3 gain"
+#define parametricFilter3GainName  "P EQ 3 Gain"
+
+#define parametricFilter4GainID  "parametric eq band 4 gain"
+#define parametricFilter4GainName  "P EQ 4 Gain"
+
+#define parametricFilter1FreqID  "parametric eq band 1 freq"
+#define parametricFilter1FreqName  "P EQ 1 Freq"
+
+#define parametricFilter2FreqID  "parametric eq band 1 freq"
+#define parametricFilter2FreqName  "P EQ 2 Freq"
+
+#define parametricFilter3FreqID  "parametric eq band 1 freq"
+#define parametricFilter3FreqName  "P EQ 3 Freq"
+
+#define parametricFilter4FreqID  "parametric eq band 1 freq"
+#define parametricFilter4FreqName  "P EQ 4 Freq"
+
+
 #define graphicEQONID  "grapgicEQON"
 #define graphicEQONName  "Graphic EQ ON"
 
