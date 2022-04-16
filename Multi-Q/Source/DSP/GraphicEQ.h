@@ -33,33 +33,16 @@ public:
             return;
         }
 
-        for (size_t channel = 0; channel < numChannels; ++channel)
-        {
-            auto* input = inBlock.getChannelPointer (channel);
-            auto* output = outBlock.getChannelPointer (channel);
-            
-            for (size_t sample = 0; sample < len; ++sample)
-            {
-                output[sample] = processSample(input[sample], channel);
-            }
-        }
-    }
-    
-    /** Process an individual sample */
-    SampleType processSample(SampleType input, SampleType channel) noexcept
-    {
-        input = filter1.processSample(input, channel);
-        input = filter2.processSample(input, channel);
-        input = filter3.processSample(input, channel);
-        input = filter4.processSample(input, channel);
-        input = filter5.processSample(input, channel);
-        input = filter6.processSample(input, channel);
-        input = filter7.processSample(input, channel);
-        input = filter8.processSample(input, channel);
-        input = filter9.processSample(input, channel);
-        input = filter10.processSample(input, channel);
-        
-        return input;
+        filter1.process(context);
+        filter2.process(context);
+        filter3.process(context);
+        filter4.process(context);
+        filter5.process(context);
+        filter6.process(context);
+        filter7.process(context);
+        filter8.process(context);
+        filter9.process(context);
+        filter10.process(context);
     }
     
     /** Soft Clip */
@@ -102,6 +85,7 @@ public:
     };
     
     void setParameter(ParameterId parameter, SampleType parameterValue);
+    void setStereoType(int newStereoType);
     
 private:
     

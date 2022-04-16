@@ -17,45 +17,53 @@ void GraphicEQ<SampleType>::prepare(const juce::dsp::ProcessSpec& spec)
     mRawGain.reset(mCurrentSampleRate, 0.02);
     mRawGain.setTargetValue(0.0);
     
-    int i = 0;
-    
     filter1.prepare(spec);
+    filter1.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter1.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     filter1.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 31);
     
     filter2.prepare(spec);
+    filter2.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter2.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     filter2.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 63);
     
     filter3.prepare(spec);
+    filter3.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter3.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     filter3.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 125);
     
     filter4.prepare(spec);
+    filter4.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter4.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     filter4.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 250);
     
     filter5.prepare(spec);
+    filter5.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter5.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     filter5.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 500);
     
     filter6.prepare(spec);
+    filter6.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter6.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     filter6.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 1000);
     
     filter7.prepare(spec);
+    filter7.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter7.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     filter7.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 2000);
     
     filter8.prepare(spec);
+    filter8.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter8.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     filter8.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 4000);
     
     filter9.prepare(spec);
+    filter9.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter9.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     filter9.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 8000);
     
     filter10.prepare(spec);
+    filter10.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter10.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     filter10.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 15000);
     
@@ -80,6 +88,60 @@ void GraphicEQ<SampleType>::setParameter(ParameterId parameter, SampleType param
         case ParameterId::kSampleRate: mCurrentSampleRate = parameterValue; break;
         case ParameterId::kBypass: mGlobalBypass = static_cast<bool>(parameterValue);
     }
+}
+
+template <typename SampleType>
+void GraphicEQ<SampleType>::setStereoType(int newStereoID)
+{
+    switch (newStereoID)
+    {
+        case 0:
+        {
+            filter1.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+            filter2.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+            filter3.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+            filter4.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+            filter5.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+            filter6.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+            filter7.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+            filter8.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+            filter9.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+            filter10.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+            break;
+        }
+            
+        case 1:
+        {
+            filter1.setStereoType(viator_dsp::SVFilter<float>::StereoId::kMids);
+            filter2.setStereoType(viator_dsp::SVFilter<float>::StereoId::kMids);
+            filter3.setStereoType(viator_dsp::SVFilter<float>::StereoId::kMids);
+            filter4.setStereoType(viator_dsp::SVFilter<float>::StereoId::kMids);
+            filter5.setStereoType(viator_dsp::SVFilter<float>::StereoId::kMids);
+            filter6.setStereoType(viator_dsp::SVFilter<float>::StereoId::kMids);
+            filter7.setStereoType(viator_dsp::SVFilter<float>::StereoId::kMids);
+            filter8.setStereoType(viator_dsp::SVFilter<float>::StereoId::kMids);
+            filter9.setStereoType(viator_dsp::SVFilter<float>::StereoId::kMids);
+            filter10.setStereoType(viator_dsp::SVFilter<float>::StereoId::kMids);
+            break;
+        }
+            
+        case 2:
+        {
+            filter1.setStereoType(viator_dsp::SVFilter<float>::StereoId::kSides);
+            filter2.setStereoType(viator_dsp::SVFilter<float>::StereoId::kSides);
+            filter3.setStereoType(viator_dsp::SVFilter<float>::StereoId::kSides);
+            filter4.setStereoType(viator_dsp::SVFilter<float>::StereoId::kSides);
+            filter5.setStereoType(viator_dsp::SVFilter<float>::StereoId::kSides);
+            filter6.setStereoType(viator_dsp::SVFilter<float>::StereoId::kSides);
+            filter7.setStereoType(viator_dsp::SVFilter<float>::StereoId::kSides);
+            filter8.setStereoType(viator_dsp::SVFilter<float>::StereoId::kSides);
+            filter9.setStereoType(viator_dsp::SVFilter<float>::StereoId::kSides);
+            filter10.setStereoType(viator_dsp::SVFilter<float>::StereoId::kSides);
+            break;
+        }
+    }
+    
+
 }
 
 template class GraphicEQ<float>;

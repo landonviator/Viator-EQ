@@ -12,6 +12,7 @@
 
 void MultiQAudioProcessor::updateGraphicParameters()
 {
+    graphicEQModule.setStereoType(static_cast<int>(treeState.getRawParameterValue(msID)->load()));
     graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter1Gain, treeState.getRawParameterValue(graphicFilter1GainID)->load());
     graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter2Gain, treeState.getRawParameterValue(graphicFilter2GainID)->load());
     graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter3Gain, treeState.getRawParameterValue(graphicFilter3GainID)->load());
