@@ -43,6 +43,11 @@ void MultiQAudioProcessorEditor::uiConstructor()
     addAndMakeVisible(tubeEQButton);
     tubeEQButton.setButtonText("Tube");
     tubeEQButton.setRadioGroupId(1);
+    tubeEQButton.onClick = [this]()
+    {
+        tubeEQComponent.setVisible(tubeEQButton.getToggleState());
+        tubeEQComponent.setEnabled(tubeEQButton.getToggleState());
+    };
     
     // Graphic EQ
     addAndMakeVisible(graphicEQComponent);
@@ -53,4 +58,9 @@ void MultiQAudioProcessorEditor::uiConstructor()
     addAndMakeVisible(parametricEQComponent);
     parametricEQComponent.setVisible(paraEQButton.getToggleState());
     parametricEQComponent.setEnabled(paraEQButton.getToggleState());
+    
+    // Tube EQ
+    addAndMakeVisible(tubeEQComponent);
+    tubeEQComponent.setVisible(tubeEQButton.getToggleState());
+    tubeEQComponent.setEnabled(tubeEQButton.getToggleState());
 }

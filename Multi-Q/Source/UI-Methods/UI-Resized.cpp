@@ -24,6 +24,9 @@ void MultiQAudioProcessorEditor::uiResized()
     // Parametric EQ
     parametricEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
     
+    // Tube EQ
+    tubeEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    
     // Output
     auto leftOutputMargin = getWidth() * 0.66;
     auto topOutputMargin = getHeight() * 0.12;

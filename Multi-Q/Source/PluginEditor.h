@@ -14,6 +14,7 @@
 #include "./UI-Components/GraphicEQComponent.h"
 #include "./UI-Components/OutputComponent.h"
 #include "./UI-Components/ParametricEQComponent.h"
+#include "TubeEQComponent.h"
 
 //==============================================================================
 /**
@@ -50,6 +51,9 @@ private:
     
     /** Parametric EQ*/
     ParametricEQComponent parametricEQComponent;
+    
+    /** Tube EQ */
+    TubeEQComponent tubeEQComponent;
     
     viator_gui::Fader driveFader {" dB", "Drive", 0.0, 12.0, 0.01, 0.0};
     viator_gui::Fader trimFader {" dB", "Trim", -12.0, 12.0, 0.01, 0.0};

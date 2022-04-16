@@ -14,9 +14,13 @@
 //==============================================================================
 TubeEQComponent::TubeEQComponent()
 {
-    // In your constructor, you should add any child components, and
-    // initialise any special settings that your component needs.
-
+    addAndMakeVisible(lowBoostDial);
+    addAndMakeVisible(lowCutDial);
+    addAndMakeVisible(highBoostDial);
+    addAndMakeVisible(highCutDial);
+    addAndMakeVisible(lowFreqDial);
+    addAndMakeVisible(highFreqDial);
+    addAndMakeVisible(bandwidthDial);
 }
 
 TubeEQComponent::~TubeEQComponent()
@@ -25,27 +29,23 @@ TubeEQComponent::~TubeEQComponent()
 
 void TubeEQComponent::paint (juce::Graphics& g)
 {
-    /* This demo code just fills the component's background and
-       draws some placeholder text to get you started.
-
-       You should replace everything in this method with your own
-       drawing code..
-    */
-
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));   // clear the background
-
-    g.setColour (juce::Colours::grey);
-    g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
-
-    g.setColour (juce::Colours::white);
-    g.setFont (14.0f);
-    g.drawText ("TubeEQComponent", getLocalBounds(),
-                juce::Justification::centred, true);   // draw some placeholder text
+    
 }
 
 void TubeEQComponent::resized()
 {
-    // This method is where you should set the bounds of any child
-    // components that your component contains..
-
+    auto leftMargin = 0;
+    auto topMargin = 36;
+    auto dialSize = getHeight() * 0.4;
+    auto smallDialSize = dialSize * 0.85;
+    auto spaceBetweenDials = 1.1;
+    
+    lowBoostDial.setBounds(leftMargin, topMargin, dialSize, dialSize);
+    lowCutDial.setBounds(lowBoostDial.getX() + lowBoostDial.getWidth() * spaceBetweenDials, topMargin, dialSize, dialSize);
+    highBoostDial.setBounds(lowCutDial.getX() + lowCutDial.getWidth() * spaceBetweenDials, topMargin, dialSize, dialSize);
+    highCutDial.setBounds(highBoostDial.getX() + highBoostDial.getWidth() * spaceBetweenDials, topMargin, dialSize, dialSize);
+        
+    lowFreqDial.setBounds(lowBoostDial.getX() + (lowBoostDial.getWidth() / 1.55), lowBoostDial.getY() + lowBoostDial.getHeight() * 1.2, smallDialSize, smallDialSize);
+    bandwidthDial.setBounds(lowFreqDial.getX() + lowFreqDial.getWidth() * 1.3, lowFreqDial.getY(), smallDialSize, smallDialSize);
+    highFreqDial.setBounds(highBoostDial.getX() + (highBoostDial.getWidth() / 1.55), bandwidthDial.getY(), smallDialSize, smallDialSize);
 }
