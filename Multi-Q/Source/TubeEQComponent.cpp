@@ -18,8 +18,13 @@ TubeEQComponent::TubeEQComponent()
     addAndMakeVisible(lowCutDial);
     addAndMakeVisible(highBoostDial);
     addAndMakeVisible(highCutDial);
+    
     addAndMakeVisible(lowFreqDial);
+    lowFreqDial.setSkewFactorFromMidPoint(100.0);
+    
     addAndMakeVisible(highFreqDial);
+    highFreqDial.setSkewFactorFromMidPoint(6000.0);
+    
     addAndMakeVisible(bandwidthDial);
 }
 
@@ -38,7 +43,7 @@ void TubeEQComponent::resized()
     auto topMargin = 36;
     auto dialSize = getHeight() * 0.4;
     auto smallDialSize = dialSize * 0.85;
-    auto spaceBetweenDials = 1.1;
+    auto spaceBetweenDials = 1.05;
     
     lowBoostDial.setBounds(leftMargin, topMargin, dialSize, dialSize);
     lowCutDial.setBounds(lowBoostDial.getX() + lowBoostDial.getWidth() * spaceBetweenDials, topMargin, dialSize, dialSize);

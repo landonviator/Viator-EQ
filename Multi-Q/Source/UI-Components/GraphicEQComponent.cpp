@@ -38,16 +38,17 @@ void GraphicEQComponent::paint (juce::Graphics& g)
 
 void GraphicEQComponent::resized()
 {
-    auto leftMargin = 0;
+    auto leftMargin = 12;
     auto topMargin = 24;
-    auto faderheight = getHeight() * 0.41;
-    auto faderWidth = faderheight * 0.8;
+    auto faderWidth = getWidth() * 0.1;
+    auto faderheight = faderWidth * 2.35;
+    auto spaceBetween = 1.85;
 
     band1.setBounds(leftMargin, topMargin, faderWidth, faderheight);
-    band2.setBounds(band1.getX() + band1.getWidth(), topMargin, faderWidth, faderheight);
-    band3.setBounds(band2.getX() + band2.getWidth(), topMargin, faderWidth, faderheight);
-    band4.setBounds(band3.getX() + band3.getWidth(), topMargin, faderWidth, faderheight);
-    band5.setBounds(band4.getX() + band4.getWidth(), topMargin, faderWidth, faderheight);
+    band2.setBounds(band1.getX() + band1.getWidth() * spaceBetween, topMargin, faderWidth, faderheight);
+    band3.setBounds(band2.getX() + band2.getWidth() * spaceBetween, topMargin, faderWidth, faderheight);
+    band4.setBounds(band3.getX() + band3.getWidth() * spaceBetween, topMargin, faderWidth, faderheight);
+    band5.setBounds(band4.getX() + band4.getWidth() * spaceBetween, topMargin, faderWidth, faderheight);
     
     auto bottomMargin = band4.getY() + band4.getHeight() * 1.2;
     

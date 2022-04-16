@@ -55,14 +55,16 @@ private:
     /** Tube EQ */
     TubeEQComponent tubeEQComponent;
     
+    /** Output Section*/
+    viator_gui::Fader hpFader {" dB", "HP", 20.0, 1000.0, 1.0, 0.0};
+    viator_gui::Fader lpFader {" dB", "LP", 1000.0, 20000.0, 1.0, 0.0};
     viator_gui::Fader driveFader {" dB", "Drive", 0.0, 12.0, 0.01, 0.0};
     viator_gui::Fader trimFader {" dB", "Trim", -12.0, 12.0, 0.01, 0.0};
-    
-    viator_gui::Toggle phaseToggle {""};
-    
     viator_gui::PushButton graphicEQButton;
     viator_gui::PushButton paraEQButton;
     viator_gui::PushButton tubeEQButton;
+    viator_gui::Toggle phaseToggle {""};
+    
     
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessorEditor)

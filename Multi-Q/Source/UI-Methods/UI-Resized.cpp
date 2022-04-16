@@ -28,17 +28,19 @@ void MultiQAudioProcessorEditor::uiResized()
     tubeEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
     
     // Output
-    auto leftOutputMargin = getWidth() * 0.66;
+    auto leftOutputMargin = getWidth() * 0.64;
     auto topOutputMargin = getHeight() * 0.12;
     auto faderheight = getHeight() * 0.55;
-    auto faderWidth = faderheight * 0.4;
-    auto buttonWidth = getWidth() * 0.08;
+    auto faderWidth = getWidth() * 0.065;
+    auto buttonWidth = faderWidth * 1.3333;
     auto buttonheight = buttonWidth * 0.33;
     
-    driveFader.setBounds(leftOutputMargin, topOutputMargin, faderWidth, faderheight);
-    trimFader.setBounds(driveFader.getX() + driveFader.getWidth() * 1.25, topOutputMargin, faderWidth, faderheight);
+    hpFader.setBounds(leftOutputMargin, topOutputMargin, faderWidth, faderheight);
+    lpFader.setBounds(hpFader.getX() + hpFader.getWidth(), topOutputMargin, faderWidth, faderheight);
+    driveFader.setBounds(lpFader.getX() + lpFader.getWidth(), topOutputMargin, faderWidth, faderheight);
+    trimFader.setBounds(driveFader.getX() + driveFader.getWidth(), topOutputMargin, faderWidth, faderheight);
     
-    graphicEQButton.setBounds(driveFader.getX(), driveFader.getY() + driveFader.getHeight(), buttonWidth, buttonheight);
+    graphicEQButton.setBounds(hpFader.getX(), driveFader.getY() + driveFader.getHeight(), buttonWidth, buttonheight);
     paraEQButton.setBounds(graphicEQButton.getX() + graphicEQButton.getWidth(), driveFader.getY() + driveFader.getHeight(), buttonWidth, buttonheight);
     tubeEQButton.setBounds(paraEQButton.getX() + paraEQButton.getWidth(), driveFader.getY() + driveFader.getHeight(), buttonWidth, buttonheight);
     

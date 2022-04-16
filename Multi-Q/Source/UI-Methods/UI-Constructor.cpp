@@ -17,6 +17,8 @@ void MultiQAudioProcessorEditor::uiConstructor()
     addAndMakeVisible(windowComponent);
     
     // Output
+    addAndMakeVisible(hpFader);
+    addAndMakeVisible(lpFader);
     addAndMakeVisible(driveFader);
     addAndMakeVisible(trimFader);
     addAndMakeVisible(phaseToggle);
