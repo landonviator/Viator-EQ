@@ -2,6 +2,15 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Multi-Q\Source\GraphicEQ">
+      <UniqueIdentifier>{42A179B9-940C-3AC6-77FA-5AEBDBB7CB3E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Multi-Q\Source\ParametricEQ">
+      <UniqueIdentifier>{3E0A3E64-562D-CDF9-B4C2-BCF7CDD893F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Multi-Q\Source\TubeEQ">
+      <UniqueIdentifier>{195FD33C-3358-0009-D36E-2BCEFAA73DF6}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Multi-Q\Source\DSP">
       <UniqueIdentifier>{74BC9DC9-B1CF-6087-E8CA-3E2C62953D90}</UniqueIdentifier>
     </Filter>
@@ -499,6 +508,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\GraphicEQ\GraphicEQ.cpp">
+      <Filter>Multi-Q\Source\GraphicEQ</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ParametricEQ\ParametricEQ.cpp">
+      <Filter>Multi-Q\Source\ParametricEQ</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TubeEQ\TubeEQ.cpp">
+      <Filter>Multi-Q\Source\TubeEQ</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\DSP\GraphicEQ.cpp">
       <Filter>Multi-Q\Source\DSP</Filter>
     </ClCompile>

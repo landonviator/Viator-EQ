@@ -81,7 +81,11 @@ private:
     void parameterChanged (const juce::String& parameterID, float newValue) override;
     
     /** DSP */
+    juce::dsp::Oversampling<float> oversamplingModule;
+    juce::dsp::ProcessSpec spec;
+    
     GraphicEQ<float> graphicEQModule;
+    void updateGraphicParameters();
     
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessor)

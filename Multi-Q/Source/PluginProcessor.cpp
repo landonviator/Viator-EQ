@@ -21,6 +21,8 @@ MultiQAudioProcessor::MultiQAudioProcessor()
                      #endif
                        )
 , treeState(*this, nullptr, "PARAMETERS", createParameterLayout())
+, oversamplingModule(2, 4, juce::dsp::Oversampling<float>::FilterType::filterHalfBandPolyphaseIIR)
+
 #endif
 {
     treeState.addParameterListener(graphicFilter1GainID, this);
@@ -33,6 +35,14 @@ MultiQAudioProcessor::MultiQAudioProcessor()
     treeState.addParameterListener(graphicFilter8GainID, this);
     treeState.addParameterListener(graphicFilter9GainID, this);
     treeState.addParameterListener(graphicFilter10GainID, this);
+    
+    treeState.addParameterListener(graphicEQONID, this);
+    treeState.addParameterListener(paraEQONID, this);
+    treeState.addParameterListener(tubeEQONID, this);
+    
+    treeState.addParameterListener(phaseID, this);
+    treeState.addParameterListener(qualityID, this);
+    treeState.addParameterListener(msID, this);
     
     treeState.addParameterListener(highpassID, this);
     treeState.addParameterListener(lowpassID, this);
@@ -53,6 +63,14 @@ MultiQAudioProcessor::~MultiQAudioProcessor()
     treeState.removeParameterListener(graphicFilter8GainID, this);
     treeState.removeParameterListener(graphicFilter9GainID, this);
     treeState.removeParameterListener(graphicFilter10GainID, this);
+    
+    treeState.removeParameterListener(graphicEQONID, this);
+    treeState.removeParameterListener(paraEQONID, this);
+    treeState.removeParameterListener(tubeEQONID, this);
+    
+    treeState.removeParameterListener(phaseID, this);
+    treeState.removeParameterListener(qualityID, this);
+    treeState.removeParameterListener(msID, this);
     
     treeState.removeParameterListener(highpassID, this);
     treeState.removeParameterListener(lowpassID, this);
@@ -76,6 +94,14 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     auto gF9 = std::make_unique<juce::AudioParameterFloat>(graphicFilter9GainID, graphicFilter9GainName, -12.0f, 12.0f, 0.0f);
     auto gF10 = std::make_unique<juce::AudioParameterFloat>(graphicFilter10GainID, graphicFilter10GainName, -12.0f, 12.0f, 0.0f);
     
+    auto gON = std::make_unique<juce::AudioParameterBool>(graphicEQONID, graphicEQONName, false);
+    auto pON = std::make_unique<juce::AudioParameterBool>(paraEQONID, paraEQONName, false);
+    auto tON = std::make_unique<juce::AudioParameterBool>(tubeEQONID, tubeEQONName, false);
+    
+    auto pPhase = std::make_unique<juce::AudioParameterBool>(phaseID, phaseName, false);
+    auto pQuality = std::make_unique<juce::AudioParameterInt>(qualityID, qualityName, 0, 1, 0);
+    auto pMS = std::make_unique<juce::AudioParameterInt>(msID, msName, 0, 2, 0);
+    
     auto hpParam = std::make_unique<juce::AudioParameterFloat>(highpassID, highpassName, 20.0f, 1000.0f, 20.0f);
     auto lpParam = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, 1000.0f, 20000.0f, 20000.0f);
     
@@ -93,6 +119,14 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     params.push_back(std::move(gF9));
     params.push_back(std::move(gF10));
     
+    params.push_back(std::move(gON));
+    params.push_back(std::move(pON));
+    params.push_back(std::move(tON));
+    
+    params.push_back(std::move(pPhase));
+    params.push_back(std::move(pQuality));
+    params.push_back(std::move(pMS));
+    
     params.push_back(std::move(hpParam));
     params.push_back(std::move(lpParam));
     
@@ -104,10 +138,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
 
 void MultiQAudioProcessor::parameterChanged(const juce::String &parameterID, float newValue)
 {
-    if (parameterID == "trim")
-    {
-        DBG(newValue);
-    }
+    updateGraphicParameters();
 }
 
 //==============================================================================
@@ -175,12 +206,17 @@ void MultiQAudioProcessor::changeProgramName (int index, const juce::String& new
 //==============================================================================
 void MultiQAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
+    /** Oversampling */
+    oversamplingModule.initProcessing(samplesPerBlock);
+    oversamplingModule.reset();
+    
     // Initialize spec for dsp modules
-    juce::dsp::ProcessSpec spec;
     spec.maximumBlockSize = samplesPerBlock;
     spec.sampleRate = sampleRate;
     spec.numChannels = getTotalNumOutputChannels();
     
+    graphicEQModule.prepare(spec);
+    updateGraphicParameters();
 }
 
 void MultiQAudioProcessor::releaseResources()
@@ -221,6 +257,9 @@ void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
+    juce::dsp::AudioBlock<float> audioBlock {buffer};
+    
+    graphicEQModule.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
 }
 
 //==============================================================================
@@ -231,8 +270,8 @@ bool MultiQAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* MultiQAudioProcessor::createEditor()
 {
-    return new MultiQAudioProcessorEditor (*this);
-    //return new juce::GenericAudioProcessorEditor (*this);
+    //return new MultiQAudioProcessorEditor (*this);
+    return new juce::GenericAudioProcessorEditor (*this);
 }
 
 //==============================================================================
@@ -257,6 +296,8 @@ void MultiQAudioProcessor::setStateInformation (const void* data, int sizeInByte
         // Window Size
         windowWidth = variableTree.getProperty("width");
         windowHeight = variableTree.getProperty("height");
+        
+        updateGraphicParameters();
     }
 }
 

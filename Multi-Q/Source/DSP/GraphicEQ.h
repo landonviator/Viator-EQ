@@ -125,16 +125,6 @@ private:
     viator_dsp::SVFilter<float> filter8;
     viator_dsp::SVFilter<float> filter9;
     viator_dsp::SVFilter<float> filter10;
-    
-    std::array<viator_dsp::SVFilter<float>, 10> filters =
-    {
-        filter1, filter2, filter3, filter4, filter5, filter6, filter7, filter8, filter9, filter10
-    };
-    
-    std::array<int, 10> cutoffs =
-    {
-        31, 63, 125, 250, 500, 1000, 2000, 4000, 8000, 15000
-    };
 };
 
 #endif /* Distortion_h */

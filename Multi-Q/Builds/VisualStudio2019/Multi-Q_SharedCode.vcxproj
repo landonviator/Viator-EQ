@@ -137,6 +137,9 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\GraphicEQ\GraphicEQ.cpp"/>
+    <ClCompile Include="..\..\Source\ParametricEQ\ParametricEQ.cpp"/>
+    <ClCompile Include="..\..\Source\TubeEQ\TubeEQ.cpp"/>
     <ClCompile Include="..\..\Source\DSP\GraphicEQ.cpp"/>
     <ClCompile Include="..\..\Source\DSP\ParametricEQ.cpp"/>
     <ClCompile Include="..\..\Source\DSP\TubeEQ.cpp"/>

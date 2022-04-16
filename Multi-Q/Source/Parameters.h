@@ -30,6 +30,24 @@
 #define graphicFilter10GainID  "graphic eq band 10 gain"
 #define graphicFilter10GainName  "G EQ 10 Gain"
 
+#define graphicEQONID  "grapgicEQON"
+#define graphicEQONName  "Graphic EQ ON"
+
+#define paraEQONID  "parametricEQON"
+#define paraEQONName  "Parametric EQ ON"
+
+#define tubeEQONID  "tubeEQON"
+#define tubeEQONName  "Tube EQ ON"
+
+#define phaseID  "phase"
+#define phaseName  "Phase"
+
+#define qualityID  "quality"
+#define qualityName  "Quality"
+
+#define msID  "ms"
+#define msName  "M/S"
+
 #define highpassID  "highpass"
 #define highpassName  "High-Pass"
 
