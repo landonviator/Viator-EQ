@@ -23,20 +23,80 @@ MultiQAudioProcessor::MultiQAudioProcessor()
 , treeState(*this, nullptr, "PARAMETERS", createParameterLayout())
 #endif
 {
-    treeState.addParameterListener("trim", this);
+    treeState.addParameterListener(graphicFilter1GainID, this);
+    treeState.addParameterListener(graphicFilter2GainID, this);
+    treeState.addParameterListener(graphicFilter3GainID, this);
+    treeState.addParameterListener(graphicFilter4GainID, this);
+    treeState.addParameterListener(graphicFilter5GainID, this);
+    treeState.addParameterListener(graphicFilter6GainID, this);
+    treeState.addParameterListener(graphicFilter7GainID, this);
+    treeState.addParameterListener(graphicFilter8GainID, this);
+    treeState.addParameterListener(graphicFilter9GainID, this);
+    treeState.addParameterListener(graphicFilter10GainID, this);
+    
+    treeState.addParameterListener(highpassID, this);
+    treeState.addParameterListener(lowpassID, this);
+    
+    treeState.addParameterListener(driveID, this);
+    treeState.addParameterListener(trimID, this);
 }
 
 MultiQAudioProcessor::~MultiQAudioProcessor()
 {
-    treeState.removeParameterListener("trim", this);
+    treeState.removeParameterListener(graphicFilter1GainID, this);
+    treeState.removeParameterListener(graphicFilter2GainID, this);
+    treeState.removeParameterListener(graphicFilter3GainID, this);
+    treeState.removeParameterListener(graphicFilter4GainID, this);
+    treeState.removeParameterListener(graphicFilter5GainID, this);
+    treeState.removeParameterListener(graphicFilter6GainID, this);
+    treeState.removeParameterListener(graphicFilter7GainID, this);
+    treeState.removeParameterListener(graphicFilter8GainID, this);
+    treeState.removeParameterListener(graphicFilter9GainID, this);
+    treeState.removeParameterListener(graphicFilter10GainID, this);
+    
+    treeState.removeParameterListener(highpassID, this);
+    treeState.removeParameterListener(lowpassID, this);
+    
+    treeState.removeParameterListener(driveID, this);
+    treeState.removeParameterListener(trimID, this);
 }
 
 juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::createParameterLayout()
 {
     std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
-        
-    auto trimParam = std::make_unique<juce::AudioParameterFloat>("trim", "Trim", -24.0f, 24.0f, 0.0f);
     
+    auto gF1 = std::make_unique<juce::AudioParameterFloat>(graphicFilter1GainID, graphicFilter1GainName, -12.0f, 12.0f, 0.0f);
+    auto gF2 = std::make_unique<juce::AudioParameterFloat>(graphicFilter2GainID, graphicFilter2GainName, -12.0f, 12.0f, 0.0f);
+    auto gF3 = std::make_unique<juce::AudioParameterFloat>(graphicFilter3GainID, graphicFilter3GainName, -12.0f, 12.0f, 0.0f);
+    auto gF4 = std::make_unique<juce::AudioParameterFloat>(graphicFilter4GainID, graphicFilter4GainName, -12.0f, 12.0f, 0.0f);
+    auto gF5 = std::make_unique<juce::AudioParameterFloat>(graphicFilter5GainID, graphicFilter5GainName, -12.0f, 12.0f, 0.0f);
+    auto gF6 = std::make_unique<juce::AudioParameterFloat>(graphicFilter6GainID, graphicFilter6GainName, -12.0f, 12.0f, 0.0f);
+    auto gF7 = std::make_unique<juce::AudioParameterFloat>(graphicFilter7GainID, graphicFilter7GainName, -12.0f, 12.0f, 0.0f);
+    auto gF8 = std::make_unique<juce::AudioParameterFloat>(graphicFilter8GainID, graphicFilter8GainName, -12.0f, 12.0f, 0.0f);
+    auto gF9 = std::make_unique<juce::AudioParameterFloat>(graphicFilter9GainID, graphicFilter9GainName, -12.0f, 12.0f, 0.0f);
+    auto gF10 = std::make_unique<juce::AudioParameterFloat>(graphicFilter10GainID, graphicFilter10GainName, -12.0f, 12.0f, 0.0f);
+    
+    auto hpParam = std::make_unique<juce::AudioParameterFloat>(highpassID, highpassName, 20.0f, 1000.0f, 20.0f);
+    auto lpParam = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, 1000.0f, 20000.0f, 20000.0f);
+    
+    auto driveParam = std::make_unique<juce::AudioParameterFloat>(driveID, driveName, 0.0f, 12.0f, 0.0f);
+    auto trimParam = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -24.0f, 24.0f, 0.0f);
+    
+    params.push_back(std::move(gF1));
+    params.push_back(std::move(gF2));
+    params.push_back(std::move(gF3));
+    params.push_back(std::move(gF4));
+    params.push_back(std::move(gF5));
+    params.push_back(std::move(gF6));
+    params.push_back(std::move(gF7));
+    params.push_back(std::move(gF8));
+    params.push_back(std::move(gF9));
+    params.push_back(std::move(gF10));
+    
+    params.push_back(std::move(hpParam));
+    params.push_back(std::move(lpParam));
+    
+    params.push_back(std::move(driveParam));
     params.push_back(std::move(trimParam));
     
     return { params.begin(), params.end() };
@@ -171,8 +231,8 @@ bool MultiQAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* MultiQAudioProcessor::createEditor()
 {
-    //return new MultiQAudioProcessorEditor (*this);
-    return new juce::GenericAudioProcessorEditor (*this);
+    return new MultiQAudioProcessorEditor (*this);
+    //return new juce::GenericAudioProcessorEditor (*this);
 }
 
 //==============================================================================

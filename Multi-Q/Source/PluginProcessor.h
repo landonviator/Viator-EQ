@@ -12,6 +12,7 @@
 #include "./DSP/GraphicEQ.h"
 #include "./DSP/ParametricEQ.h"
 #include "./DSP/TubeEQ.h"
+#include "Parameters.h"
 
 //==============================================================================
 /**
