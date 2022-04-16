@@ -85,6 +85,7 @@ private:
     juce::dsp::ProcessSpec spec;
     void updateCommonParameters();
     bool osToggle = false;
+    bool phaseToggle = false;
     
     GraphicEQ<float> graphicEQModule;
     void updateGraphicParameters();

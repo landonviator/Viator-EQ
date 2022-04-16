@@ -13,4 +13,5 @@
 void MultiQAudioProcessor::updateCommonParameters()
 {
     osToggle = static_cast<bool>(treeState.getRawParameterValue(qualityID)->load());
+    phaseToggle = static_cast<bool>(treeState.getRawParameterValue(phaseID)->load());
 }

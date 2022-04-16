@@ -295,12 +295,22 @@ void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
         upSampledBlock = oversamplingModule.processSamplesUp(block);
         graphicEQModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
         oversamplingModule.processSamplesDown(block);
+        
+        if (phaseToggle)
+        {
+            viator_utils::utils::invertBlock(block);
+        }
     }
 
     // Don't Oversample if OFF
     else
     {
         graphicEQModule.process(juce::dsp::ProcessContextReplacing<float>(block));
+        
+        if (phaseToggle)
+        {
+            viator_utils::utils::invertBlock(block);
+        }
     }
 }
 
