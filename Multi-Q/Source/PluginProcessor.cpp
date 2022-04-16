@@ -21,7 +21,7 @@ MultiQAudioProcessor::MultiQAudioProcessor()
                      #endif
                        )
 , treeState(*this, nullptr, "PARAMETERS", createParameterLayout())
-, oversamplingModule(2, 4, juce::dsp::Oversampling<float>::FilterType::filterHalfBandPolyphaseIIR)
+, oversamplingModule(2, 1, juce::dsp::Oversampling<float>::FilterType::filterHalfBandPolyphaseIIR)
 
 #endif
 {
@@ -94,7 +94,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     auto gF9 = std::make_unique<juce::AudioParameterFloat>(graphicFilter9GainID, graphicFilter9GainName, -12.0f, 12.0f, 0.0f);
     auto gF10 = std::make_unique<juce::AudioParameterFloat>(graphicFilter10GainID, graphicFilter10GainName, -12.0f, 12.0f, 0.0f);
     
-    auto gON = std::make_unique<juce::AudioParameterBool>(graphicEQONID, graphicEQONName, false);
+    auto gON = std::make_unique<juce::AudioParameterBool>(graphicEQONID, graphicEQONName, true);
     auto pON = std::make_unique<juce::AudioParameterBool>(paraEQONID, paraEQONName, false);
     auto tON = std::make_unique<juce::AudioParameterBool>(tubeEQONID, tubeEQONName, false);
     
