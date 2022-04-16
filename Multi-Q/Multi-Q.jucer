@@ -4,6 +4,7 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Viator DSP">
   <MAINGROUP id="hgatCz" name="Multi-Q">
     <GROUP id="{5244337E-67A1-F4C5-25A2-8EC35329EDEC}" name="Source">
+      <FILE id="HgRcsr" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
       <GROUP id="{9230D3AD-D5F3-5387-EA55-4643B342ECE6}" name="DSP">
         <FILE id="RjuITb" name="GraphicEQ.cpp" compile="1" resource="0" file="Source/DSP/GraphicEQ.cpp"/>
         <FILE id="tGZdJN" name="GraphicEQ.h" compile="0" resource="0" file="Source/DSP/GraphicEQ.h"/>

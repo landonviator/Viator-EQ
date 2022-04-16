@@ -2267,6 +2267,7 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_viator_modules.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Parameters.h"/>
     <ClInclude Include="..\..\Source\DSP\GraphicEQ.h"/>
     <ClInclude Include="..\..\Source\DSP\ParametricEQ.h"/>
     <ClInclude Include="..\..\Source\DSP\TubeEQ.h"/>

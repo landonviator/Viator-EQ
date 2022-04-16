@@ -2826,6 +2826,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Parameters.h">
+      <Filter>Multi-Q\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\DSP\GraphicEQ.h">
       <Filter>Multi-Q\Source\DSP</Filter>
     </ClInclude>
