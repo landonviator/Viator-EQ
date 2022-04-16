@@ -4,6 +4,15 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Viator DSP">
   <MAINGROUP id="hgatCz" name="Multi-Q">
     <GROUP id="{5244337E-67A1-F4C5-25A2-8EC35329EDEC}" name="Source">
+      <GROUP id="{9230D3AD-D5F3-5387-EA55-4643B342ECE6}" name="DSP">
+        <FILE id="RjuITb" name="GraphicEQ.cpp" compile="1" resource="0" file="Source/DSP/GraphicEQ.cpp"/>
+        <FILE id="tGZdJN" name="GraphicEQ.h" compile="0" resource="0" file="Source/DSP/GraphicEQ.h"/>
+        <FILE id="RvcWS9" name="ParametricEQ.cpp" compile="1" resource="0"
+              file="Source/DSP/ParametricEQ.cpp"/>
+        <FILE id="UN9lYc" name="ParametricEQ.h" compile="0" resource="0" file="Source/DSP/ParametricEQ.h"/>
+        <FILE id="Wo3v1S" name="TubeEQ.cpp" compile="1" resource="0" file="Source/DSP/TubeEQ.cpp"/>
+        <FILE id="W3Ee8A" name="TubeEQ.h" compile="0" resource="0" file="Source/DSP/TubeEQ.h"/>
+      </GROUP>
       <GROUP id="{5D1B686E-516F-6F7D-6CEC-3FB6814A4BD3}" name="UI-Methods">
         <FILE id="kQV2sK" name="OversamplingMenu.cpp" compile="1" resource="0"
               file="Source/UI-Methods/OversamplingMenu.cpp"/>

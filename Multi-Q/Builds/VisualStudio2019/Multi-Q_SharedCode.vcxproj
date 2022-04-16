@@ -137,6 +137,9 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\DSP\GraphicEQ.cpp"/>
+    <ClCompile Include="..\..\Source\DSP\ParametricEQ.cpp"/>
+    <ClCompile Include="..\..\Source\DSP\TubeEQ.cpp"/>
     <ClCompile Include="..\..\Source\UI-Methods\OversamplingMenu.cpp"/>
     <ClCompile Include="..\..\Source\UI-Methods\UI-Constructor.cpp"/>
     <ClCompile Include="..\..\Source\UI-Methods\UI-InitWindow.cpp"/>
@@ -2264,6 +2267,9 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_viator_modules.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\DSP\GraphicEQ.h"/>
+    <ClInclude Include="..\..\Source\DSP\ParametricEQ.h"/>
+    <ClInclude Include="..\..\Source\DSP\TubeEQ.h"/>
     <ClInclude Include="..\..\Source\UI-Components\OutputComponent.h"/>
     <ClInclude Include="..\..\Source\UI-Components\GraphicEQComponent.h"/>
     <ClInclude Include="..\..\Source\UI-Components\LV_Window.h"/>

@@ -9,6 +9,9 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "./DSP/GraphicEQ.h"
+#include "./DSP/ParametricEQ.h"
+#include "./DSP/TubeEQ.h"
 
 //==============================================================================
 /**
@@ -75,6 +78,9 @@ private:
     
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     void parameterChanged (const juce::String& parameterID, float newValue) override;
+    
+    /** DSP */
+    GraphicEQ<float> graphicEQModule;
     
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessor)

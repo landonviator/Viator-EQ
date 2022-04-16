@@ -115,8 +115,12 @@ void MultiQAudioProcessor::changeProgramName (int index, const juce::String& new
 //==============================================================================
 void MultiQAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    // Initialize spec for dsp modules
+    juce::dsp::ProcessSpec spec;
+    spec.maximumBlockSize = samplesPerBlock;
+    spec.sampleRate = sampleRate;
+    spec.numChannels = getTotalNumOutputChannels();
+    
 }
 
 void MultiQAudioProcessor::releaseResources()

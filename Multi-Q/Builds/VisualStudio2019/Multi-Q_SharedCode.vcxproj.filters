@@ -2,6 +2,9 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Multi-Q\Source\DSP">
+      <UniqueIdentifier>{74BC9DC9-B1CF-6087-E8CA-3E2C62953D90}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Multi-Q\Source\UI-Methods">
       <UniqueIdentifier>{44017B2B-C0A3-57DD-08F9-DC2C106AC655}</UniqueIdentifier>
     </Filter>
@@ -496,6 +499,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\DSP\GraphicEQ.cpp">
+      <Filter>Multi-Q\Source\DSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DSP\ParametricEQ.cpp">
+      <Filter>Multi-Q\Source\DSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DSP\TubeEQ.cpp">
+      <Filter>Multi-Q\Source\DSP</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\UI-Methods\OversamplingMenu.cpp">
       <Filter>Multi-Q\Source\UI-Methods</Filter>
     </ClCompile>
@@ -2814,6 +2826,15 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\DSP\GraphicEQ.h">
+      <Filter>Multi-Q\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\ParametricEQ.h">
+      <Filter>Multi-Q\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\TubeEQ.h">
+      <Filter>Multi-Q\Source\DSP</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\UI-Components\OutputComponent.h">
       <Filter>Multi-Q\Source\UI-Components</Filter>
     </ClInclude>
