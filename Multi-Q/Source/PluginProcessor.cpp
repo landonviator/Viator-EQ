@@ -36,6 +36,15 @@ MultiQAudioProcessor::MultiQAudioProcessor()
     treeState.addParameterListener(graphicFilter9GainID, this);
     treeState.addParameterListener(graphicFilter10GainID, this);
     
+    treeState.addParameterListener(parametricFilter1GainID, this);
+    treeState.addParameterListener(parametricFilter2GainID, this);
+    treeState.addParameterListener(parametricFilter3GainID, this);
+    treeState.addParameterListener(parametricFilter4GainID, this);
+    treeState.addParameterListener(parametricFilter1FreqID, this);
+    treeState.addParameterListener(parametricFilter2FreqID, this);
+    treeState.addParameterListener(parametricFilter3FreqID, this);
+    treeState.addParameterListener(parametricFilter4FreqID, this);
+    
     treeState.addParameterListener(graphicEQONID, this);
     treeState.addParameterListener(paraEQONID, this);
     treeState.addParameterListener(tubeEQONID, this);
@@ -63,6 +72,15 @@ MultiQAudioProcessor::~MultiQAudioProcessor()
     treeState.removeParameterListener(graphicFilter8GainID, this);
     treeState.removeParameterListener(graphicFilter9GainID, this);
     treeState.removeParameterListener(graphicFilter10GainID, this);
+    
+    treeState.removeParameterListener(parametricFilter1GainID, this);
+    treeState.removeParameterListener(parametricFilter2GainID, this);
+    treeState.removeParameterListener(parametricFilter3GainID, this);
+    treeState.removeParameterListener(parametricFilter4GainID, this);
+    treeState.removeParameterListener(parametricFilter1FreqID, this);
+    treeState.removeParameterListener(parametricFilter2FreqID, this);
+    treeState.removeParameterListener(parametricFilter3FreqID, this);
+    treeState.removeParameterListener(parametricFilter4FreqID, this);
     
     treeState.removeParameterListener(graphicEQONID, this);
     treeState.removeParameterListener(paraEQONID, this);
@@ -94,6 +112,15 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     auto gF9 = std::make_unique<juce::AudioParameterFloat>(graphicFilter9GainID, graphicFilter9GainName, -12.0f, 12.0f, 0.0f);
     auto gF10 = std::make_unique<juce::AudioParameterFloat>(graphicFilter10GainID, graphicFilter10GainName, -12.0f, 12.0f, 0.0f);
     
+    auto pF1G = std::make_unique<juce::AudioParameterFloat>(parametricFilter1GainID, parametricFilter1GainName, -12.0f, 12.0f, 0.0f);
+    auto pF2G = std::make_unique<juce::AudioParameterFloat>(parametricFilter2GainID, parametricFilter2GainName, -12.0f, 12.0f, 0.0f);
+    auto pF3G = std::make_unique<juce::AudioParameterFloat>(parametricFilter3GainID, parametricFilter3GainName, -12.0f, 12.0f, 0.0f);
+    auto pF4G = std::make_unique<juce::AudioParameterFloat>(parametricFilter4GainID, parametricFilter4GainName, -12.0f, 12.0f, 0.0f);
+    auto pF1F = std::make_unique<juce::AudioParameterFloat>(parametricFilter1FreqID, parametricFilter1FreqName, 30.0f, 400.0f, 0.0f);
+    auto pF2F = std::make_unique<juce::AudioParameterFloat>(parametricFilter2FreqID, parametricFilter2FreqName, 200.0f, 2000.0f, 0.0f);
+    auto pF3F = std::make_unique<juce::AudioParameterFloat>(parametricFilter3FreqID, parametricFilter3FreqName, 200.0f, 2000.0f, 0.0f);
+    auto pF4F = std::make_unique<juce::AudioParameterFloat>(parametricFilter4FreqID, parametricFilter4FreqName, 1000.0f, 20000.0f, 0.0f);
+    
     auto gON = std::make_unique<juce::AudioParameterBool>(graphicEQONID, graphicEQONName, true);
     auto pON = std::make_unique<juce::AudioParameterBool>(paraEQONID, paraEQONName, false);
     auto tON = std::make_unique<juce::AudioParameterBool>(tubeEQONID, tubeEQONName, false);
@@ -118,6 +145,15 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     params.push_back(std::move(gF8));
     params.push_back(std::move(gF9));
     params.push_back(std::move(gF10));
+    
+    params.push_back(std::move(pF1G));
+    params.push_back(std::move(pF2G));
+    params.push_back(std::move(pF3G));
+    params.push_back(std::move(pF4G));
+    params.push_back(std::move(pF1F));
+    params.push_back(std::move(pF2F));
+    params.push_back(std::move(pF3F));
+    params.push_back(std::move(pF4F));
     
     params.push_back(std::move(gON));
     params.push_back(std::move(pON));

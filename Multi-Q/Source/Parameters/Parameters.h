@@ -45,13 +45,13 @@
 #define parametricFilter1FreqID  "parametric eq band 1 freq"
 #define parametricFilter1FreqName  "P EQ 1 Freq"
 
-#define parametricFilter2FreqID  "parametric eq band 1 freq"
+#define parametricFilter2FreqID  "parametric eq band 2 freq"
 #define parametricFilter2FreqName  "P EQ 2 Freq"
 
-#define parametricFilter3FreqID  "parametric eq band 1 freq"
+#define parametricFilter3FreqID  "parametric eq band 3 freq"
 #define parametricFilter3FreqName  "P EQ 3 Freq"
 
-#define parametricFilter4FreqID  "parametric eq band 1 freq"
+#define parametricFilter4FreqID  "parametric eq band 4 freq"
 #define parametricFilter4FreqName  "P EQ 4 Freq"
 
 
