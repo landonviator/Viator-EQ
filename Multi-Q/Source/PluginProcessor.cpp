@@ -184,6 +184,9 @@ void MultiQAudioProcessor::parameterChanged(const juce::String &parameterID, flo
             spec.sampleRate = getSampleRate() * oversamplingModule.getOversamplingFactor();
             graphicEQModule.prepare(spec);
             parametricEQModule.prepare(spec);
+            hpFilter.prepare(spec);
+            lpFilter.prepare(spec);
+            gainModule.prepare(spec);
         }
 
         else
@@ -191,6 +194,9 @@ void MultiQAudioProcessor::parameterChanged(const juce::String &parameterID, flo
             spec.sampleRate = getSampleRate();
             graphicEQModule.prepare(spec);
             parametricEQModule.prepare(spec);
+            hpFilter.prepare(spec);
+            lpFilter.prepare(spec);
+            gainModule.prepare(spec);
         }
     }
     
@@ -291,6 +297,17 @@ void MultiQAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock
     
     parametricEQModule.prepare(spec);
     updateParametricParameters();
+    
+    hpFilter.prepare(spec);
+    hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kHighPass);
+    hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kGain, 0.01);
+    
+    lpFilter.prepare(spec);
+    lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kLowPass);
+    lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kGain, 0.01);
+    
+    gainModule.prepare(spec);
+    gainModule.setRampDurationSeconds(0.02);
 }
 
 void MultiQAudioProcessor::releaseResources()
@@ -337,6 +354,9 @@ void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
         upSampledBlock = oversamplingModule.processSamplesUp(block);
         graphicEQModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
         parametricEQModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
+        hpFilter.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
+        lpFilter.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
+        gainModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
         oversamplingModule.processSamplesDown(block);
         
         if (phaseToggle)
@@ -350,6 +370,9 @@ void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
     {
         graphicEQModule.process(juce::dsp::ProcessContextReplacing<float>(block));
         parametricEQModule.process(juce::dsp::ProcessContextReplacing<float>(block));
+        hpFilter.process(juce::dsp::ProcessContextReplacing<float>(block));
+        lpFilter.process(juce::dsp::ProcessContextReplacing<float>(block));
+        gainModule.process(juce::dsp::ProcessContextReplacing<float>(block));
         
         if (phaseToggle)
         {

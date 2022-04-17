@@ -93,6 +93,9 @@ private:
     ParametricEQ<float> parametricEQModule;
     void updateParametricParameters();
     
+    viator_dsp::SVFilter<float> hpFilter;
+    viator_dsp::SVFilter<float> lpFilter;
+    juce::dsp::Gain<float> gainModule;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessor)
 };
