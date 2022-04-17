@@ -65,7 +65,10 @@ private:
     viator_gui::PushButton tubeEQButton;
     viator_gui::Toggle phaseToggle {""};
     
-    
+    /** Attachments */
+    std::unique_ptr <juce::AudioProcessorValueTreeState::ButtonAttachment> graphicButtonAttach;
+    std::unique_ptr <juce::AudioProcessorValueTreeState::ButtonAttachment> parametricButtonAttach;
+    std::unique_ptr <juce::AudioProcessorValueTreeState::ButtonAttachment> tubeButtonAttach;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessorEditor)
 };

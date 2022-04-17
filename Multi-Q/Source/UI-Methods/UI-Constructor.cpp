@@ -25,6 +25,7 @@ void MultiQAudioProcessorEditor::uiConstructor()
     
     // Choice buttons
     addAndMakeVisible(graphicEQButton);
+    graphicButtonAttach = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(audioProcessor.treeState, graphicEQONID, graphicEQButton);
     graphicEQButton.setButtonText("Graphic");
     graphicEQButton.setRadioGroupId(1);
     graphicEQButton.onClick = [this]()
@@ -34,6 +35,7 @@ void MultiQAudioProcessorEditor::uiConstructor()
     };
     
     addAndMakeVisible(paraEQButton);
+    parametricButtonAttach = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(audioProcessor.treeState, paraEQONID, paraEQButton);
     paraEQButton.setButtonText("Parametric");
     paraEQButton.setRadioGroupId(1);
     paraEQButton.onClick = [this]()
@@ -43,6 +45,7 @@ void MultiQAudioProcessorEditor::uiConstructor()
     };
     
     addAndMakeVisible(tubeEQButton);
+    tubeButtonAttach = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(audioProcessor.treeState, tubeEQONID, tubeEQButton);
     tubeEQButton.setButtonText("Tube");
     tubeEQButton.setRadioGroupId(1);
     tubeEQButton.onClick = [this]()
