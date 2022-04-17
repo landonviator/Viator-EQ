@@ -116,10 +116,10 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     auto pF2G = std::make_unique<juce::AudioParameterFloat>(parametricFilter2GainID, parametricFilter2GainName, -12.0f, 12.0f, 0.0f);
     auto pF3G = std::make_unique<juce::AudioParameterFloat>(parametricFilter3GainID, parametricFilter3GainName, -12.0f, 12.0f, 0.0f);
     auto pF4G = std::make_unique<juce::AudioParameterFloat>(parametricFilter4GainID, parametricFilter4GainName, -12.0f, 12.0f, 0.0f);
-    auto pF1F = std::make_unique<juce::AudioParameterFloat>(parametricFilter1FreqID, parametricFilter1FreqName, 30.0f, 400.0f, 0.0f);
-    auto pF2F = std::make_unique<juce::AudioParameterFloat>(parametricFilter2FreqID, parametricFilter2FreqName, 200.0f, 2000.0f, 0.0f);
-    auto pF3F = std::make_unique<juce::AudioParameterFloat>(parametricFilter3FreqID, parametricFilter3FreqName, 200.0f, 2000.0f, 0.0f);
-    auto pF4F = std::make_unique<juce::AudioParameterFloat>(parametricFilter4FreqID, parametricFilter4FreqName, 1000.0f, 20000.0f, 0.0f);
+    auto pF1F = std::make_unique<juce::AudioParameterFloat>(parametricFilter1FreqID, parametricFilter1FreqName, 30.0f, 400.0f, 200.0f);
+    auto pF2F = std::make_unique<juce::AudioParameterFloat>(parametricFilter2FreqID, parametricFilter2FreqName, 200.0f, 2000.0f, 1000.0f);
+    auto pF3F = std::make_unique<juce::AudioParameterFloat>(parametricFilter3FreqID, parametricFilter3FreqName, 200.0f, 2000.0f, 1000.0f);
+    auto pF4F = std::make_unique<juce::AudioParameterFloat>(parametricFilter4FreqID, parametricFilter4FreqName, 1000.0f, 20000.0f, 7000.0f);
     
     auto gON = std::make_unique<juce::AudioParameterBool>(graphicEQONID, graphicEQONName, true);
     auto pON = std::make_unique<juce::AudioParameterBool>(paraEQONID, paraEQONName, false);
@@ -183,17 +183,20 @@ void MultiQAudioProcessor::parameterChanged(const juce::String &parameterID, flo
         {
             spec.sampleRate = getSampleRate() * oversamplingModule.getOversamplingFactor();
             graphicEQModule.prepare(spec);
+            parametricEQModule.prepare(spec);
         }
 
         else
         {
             spec.sampleRate = getSampleRate();
             graphicEQModule.prepare(spec);
+            parametricEQModule.prepare(spec);
         }
     }
     
     updateGraphicParameters();
     updateCommonParameters();
+    updateParametricParameters();
 }
 
 //==============================================================================
@@ -285,6 +288,9 @@ void MultiQAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock
     
     graphicEQModule.prepare(spec);
     updateGraphicParameters();
+    
+    parametricEQModule.prepare(spec);
+    updateParametricParameters();
 }
 
 void MultiQAudioProcessor::releaseResources()
@@ -330,6 +336,7 @@ void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
     {
         upSampledBlock = oversamplingModule.processSamplesUp(block);
         graphicEQModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
+        parametricEQModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
         oversamplingModule.processSamplesDown(block);
         
         if (phaseToggle)
@@ -342,6 +349,7 @@ void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
     else
     {
         graphicEQModule.process(juce::dsp::ProcessContextReplacing<float>(block));
+        parametricEQModule.process(juce::dsp::ProcessContextReplacing<float>(block));
         
         if (phaseToggle)
         {
@@ -387,6 +395,7 @@ void MultiQAudioProcessor::setStateInformation (const void* data, int sizeInByte
         
         updateCommonParameters();
         updateGraphicParameters();
+        updateParametricParameters();
     }
 }
 
