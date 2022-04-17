@@ -56,8 +56,8 @@ private:
     TubeEQComponent tubeEQComponent;
     
     /** Output Section*/
-    viator_gui::Fader hpFader {" Hz", "HP", 20.0, 1000.0, 1.0, 0.0};
-    viator_gui::Fader lpFader {" Hz", "LP", 1000.0, 20000.0, 1.0, 0.0};
+    viator_gui::Fader hpFader {" Hz", "HP", 20.0, 1000.0, 1.0, 20.0};
+    viator_gui::Fader lpFader {" Hz", "LP", 1000.0, 20000.0, 1.0, 20000.0};
     viator_gui::Fader driveFader {" dB", "Drive", 0.0, 12.0, 0.01, 0.0};
     viator_gui::Fader trimFader {" dB", "Trim", -12.0, 12.0, 0.01, 0.0};
     viator_gui::PushButton graphicEQButton;
