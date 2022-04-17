@@ -51,7 +51,7 @@ public:
                     
             for (int sample = 0; sample < len; ++sample)
             {
-                output[sample] = softClipData(input[sample]);
+                output[sample] = softClipData(input[sample]) * viator_utils::utils::dbToGain(2.0f);
             }
         }
     }
@@ -75,7 +75,7 @@ public:
         }
         
         // Output
-        return dataToClip *= viator_utils::utils::dbToGain(-mGainDB.getNextValue());
+        return dataToClip *= viator_utils::utils::dbToGain(-mGainDB.getNextValue() * 0.75);
     }
 
     /** The parameters of this module. */
