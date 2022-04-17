@@ -93,6 +93,8 @@ private:
     ParametricEQ<float> parametricEQModule;
     void updateParametricParameters();
     
+    TubeEQ<float> tubeEQModule;
+    
     viator_dsp::SVFilter<float> hpFilter;
     viator_dsp::SVFilter<float> lpFilter;
     juce::dsp::Gain<float> gainModule;
