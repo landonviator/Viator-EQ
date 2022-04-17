@@ -35,11 +35,23 @@ void MultiQAudioProcessorEditor::uiResized()
     auto buttonWidth = faderWidth * 1.3333;
     auto buttonheight = buttonWidth * 0.33;
     
+    // Highpass
     hpFader.setBounds(leftOutputMargin, topOutputMargin, faderWidth, faderheight);
-    lpFader.setBounds(hpFader.getX() + hpFader.getWidth(), topOutputMargin, faderWidth, faderheight);
-    driveFader.setBounds(lpFader.getX() + lpFader.getWidth(), topOutputMargin, faderWidth, faderheight);
-    trimFader.setBounds(driveFader.getX() + driveFader.getWidth(), topOutputMargin, faderWidth, faderheight);
+    hpFaderLabel.setFont(juce::Font ("Helvetica", hpFader.getWidth() * 0.2f, juce::Font::FontStyleFlags::bold));
     
+    // Lowpass
+    lpFader.setBounds(hpFader.getX() + hpFader.getWidth(), topOutputMargin, faderWidth, faderheight);
+    lpFaderLabel.setFont(juce::Font ("Helvetica", hpFader.getWidth() * 0.2f, juce::Font::FontStyleFlags::bold));
+    
+    // Drive
+    driveFader.setBounds(lpFader.getX() + lpFader.getWidth(), topOutputMargin, faderWidth, faderheight);
+    driveFaderLabel.setFont(juce::Font ("Helvetica", hpFader.getWidth() * 0.2f, juce::Font::FontStyleFlags::bold));
+    
+    // Trim
+    trimFader.setBounds(driveFader.getX() + driveFader.getWidth(), topOutputMargin, faderWidth, faderheight);
+    trimFaderLabel.setFont(juce::Font ("Helvetica", hpFader.getWidth() * 0.2f, juce::Font::FontStyleFlags::bold));
+    
+    // EQ Switch Buttons
     graphicEQButton.setBounds(hpFader.getX(), driveFader.getY() + driveFader.getHeight(), buttonWidth, buttonheight);
     paraEQButton.setBounds(graphicEQButton.getX() + graphicEQButton.getWidth(), driveFader.getY() + driveFader.getHeight(), buttonWidth, buttonheight);
     tubeEQButton.setBounds(paraEQButton.getX() + paraEQButton.getWidth(), driveFader.getY() + driveFader.getHeight(), buttonWidth, buttonheight);
