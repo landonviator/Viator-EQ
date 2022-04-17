@@ -21,5 +21,6 @@ void MultiQAudioProcessor::updateParametricParameters()
     parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter2Freq, treeState.getRawParameterValue(parametricFilter2FreqID)->load());
     parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter3Freq, treeState.getRawParameterValue(parametricFilter3FreqID)->load());
     parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter4Freq, treeState.getRawParameterValue(parametricFilter4FreqID)->load());
+    parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kDrive, treeState.getRawParameterValue(driveID)->load());
     parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kBypass, !treeState.getRawParameterValue(paraEQONID)->load());
 }

@@ -37,30 +37,34 @@ public:
         filter2.process(context);
         filter3.process(context);
         filter4.process(context);
+        
+        for (int ch = 0; ch < numChannels; ++ch)
+        {
+            auto* input = inBlock.getChannelPointer(ch);
+            auto* output = outBlock.getChannelPointer (ch);
+
+            for (int sample = 0; sample < len; ++sample)
+            {
+                output[sample] = saturateData(input[sample]);
+            }
+        }
     }
     
-    /** Soft Clip */
-    SampleType softClipData(SampleType dataToClip)
+    SampleType saturateData(SampleType dataToSaturate)
     {
-        // Preamp
-        dataToClip *= mRawGain.getNextValue();
-        
-        // Soft clipper
-        dataToClip = mPiDivisor * std::atan(dataToClip);
-        
-        // Compensation
-        dataToClip *= 2.0;
+        auto x = dataToSaturate * mRawGain.getNextValue();
+
+        auto saturation = x - ((x * x * x) / 6.75);
         
         // Hard clip output
-        if (std::abs(dataToClip) >= 1.0)
+        if (std::abs(saturation) >= 0.99)
         {
-            dataToClip = std::copysign(1.0, dataToClip);
+            saturation = std::copysign(0.99, saturation);
         }
-        
-        // Output
-        return dataToClip;
-    }
 
+        return saturation *= viator_utils::utils::dbToGain(-mGainDB.getNextValue());
+    }
+    
     /** The parameters of this module. */
     enum class ParameterId
     {
@@ -72,6 +76,7 @@ public:
         kFilter2Freq,
         kFilter3Freq,
         kFilter4Freq,
+        kDrive,
         kSampleRate,
         kBypass
     };
