@@ -18,9 +18,17 @@ void MultiQAudioProcessorEditor::uiConstructor()
     
     // Output
     addAndMakeVisible(hpFader);
+    hpFaderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, highpassID, hpFader);
+
     addAndMakeVisible(lpFader);
+    lpFaderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, lowpassID, lpFader);
+
     addAndMakeVisible(driveFader);
+    driveFaderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, driveID, driveFader);
+
     addAndMakeVisible(trimFader);
+    trimFaderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimID, trimFader);
+
     addAndMakeVisible(phaseToggle);
     
     // Choice buttons

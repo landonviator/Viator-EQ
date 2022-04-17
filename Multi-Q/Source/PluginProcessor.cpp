@@ -154,8 +154,8 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     auto pQuality = std::make_unique<juce::AudioParameterInt>(qualityID, qualityName, 0, 1, 0);
     auto pMS = std::make_unique<juce::AudioParameterInt>(msID, msName, 0, 2, 0);
     
-    auto hpParam = std::make_unique<juce::AudioParameterFloat>(highpassID, highpassName, 20.0f, 1000.0f, 20.0f);
-    auto lpParam = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, 1000.0f, 20000.0f, 20000.0f);
+    auto hpParam = std::make_unique<juce::AudioParameterInt>(highpassID, highpassName, 20, 1000, 20);
+    auto lpParam = std::make_unique<juce::AudioParameterInt>(lowpassID, lowpassName, 1000, 20000, 20000);
     
     auto driveParam = std::make_unique<juce::AudioParameterFloat>(driveID, driveName, 0.0f, 20.0f, 0.0f);
     auto trimParam = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -24.0f, 24.0f, 0.0f);

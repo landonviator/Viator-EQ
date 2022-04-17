@@ -56,8 +56,8 @@ private:
     TubeEQComponent tubeEQComponent;
     
     /** Output Section*/
-    viator_gui::Fader hpFader {" dB", "HP", 20.0, 1000.0, 1.0, 0.0};
-    viator_gui::Fader lpFader {" dB", "LP", 1000.0, 20000.0, 1.0, 0.0};
+    viator_gui::Fader hpFader {" Hz", "HP", 20.0, 1000.0, 1.0, 0.0};
+    viator_gui::Fader lpFader {" Hz", "LP", 1000.0, 20000.0, 1.0, 0.0};
     viator_gui::Fader driveFader {" dB", "Drive", 0.0, 12.0, 0.01, 0.0};
     viator_gui::Fader trimFader {" dB", "Trim", -12.0, 12.0, 0.01, 0.0};
     viator_gui::PushButton graphicEQButton;
@@ -66,6 +66,11 @@ private:
     viator_gui::Toggle phaseToggle {""};
     
     /** Attachments */
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> hpFaderAttach;
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> lpFaderAttach;
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> driveFaderAttach;
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> trimFaderAttach;
+    
     std::unique_ptr <juce::AudioProcessorValueTreeState::ButtonAttachment> graphicButtonAttach;
     std::unique_ptr <juce::AudioProcessorValueTreeState::ButtonAttachment> parametricButtonAttach;
     std::unique_ptr <juce::AudioProcessorValueTreeState::ButtonAttachment> tubeButtonAttach;
