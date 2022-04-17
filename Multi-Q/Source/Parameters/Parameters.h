@@ -54,6 +54,26 @@
 #define parametricFilter4FreqID  "parametric eq band 4 freq"
 #define parametricFilter4FreqName  "P EQ 4 Freq"
 
+#define tubeLowBoostID  "tube eq band 1 gain"
+#define tubeLowBoostName  "T EQ 1 Gain"
+
+#define tubeLowCutID  "tube eq band 2 gain"
+#define tubeLowCutName  "T EQ 2 Gain"
+
+#define tubeHighBoostID  "tube eq band 3 gain"
+#define tubeHighBoostName  "T EQ 3 Gain"
+
+#define tubeHighCutID  "tube eq band 4 gain"
+#define tubeHighCutName  "T EQ 4 Gain"
+
+#define tubeLowFreqID  "tube eq band 1 freq"
+#define tubeLowFreqName  "T EQ 1 Freq"
+
+#define tubeHighFreqID  "tube eq band 2 freq"
+#define tubeHighFreqName  "T EQ 2 Freq"
+
+#define tubeFilterBWID  "tube eq BW"
+#define tubeFilterBWName  "T EQ BW"
 
 #define graphicEQONID  "grapgicEQON"
 #define graphicEQONName  "Graphic EQ ON"

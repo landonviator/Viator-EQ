@@ -45,31 +45,40 @@ public:
                     
             for (int sample = 0; sample < len; ++sample)
             {
-                output[sample] = softClipData(input[sample]) * viator_utils::utils::dbToGain(2.0f);
+                output[sample] = tubeDistortion(input[sample]);
             }
         }
     }
     
-    /** Soft Clip */
-    SampleType softClipData(SampleType dataToClip)
+    SampleType tubeDistortion(SampleType dataToClip)
     {
+        
+        if (mRawGain.getNextValue() == 1.0) return dataToClip;
+        
         // Preamp
         dataToClip *= mRawGain.getNextValue();
         
-        // Soft clipper
-        dataToClip = mPiDivisor * std::atan(dataToClip);
-        
-        // Compensation
-        dataToClip *= 1.5;
-        
-        // Hard clip output
-        if (std::abs(dataToClip) >= 0.99)
+        //dataToClip += 0.15;
+            
+        // Tube logic
+        if (dataToClip < 0.0)
         {
-            dataToClip = std::copysign(0.99, dataToClip);
+            dataToClip = mPiDivisor * std::atan(dataToClip);
+        }
+                
+        else
+        {
+            if (std::abs(dataToClip) >= 0.99)
+            {
+                dataToClip = std::copysign(0.99, dataToClip);
+            }
         }
         
-        // Output
+        //dataToClip -= 0.15;
+            
+            // Output
         return dataToClip *= viator_utils::utils::dbToGain(-mGainDB.getNextValue() * 0.75);
+        
     }
 
     /** The parameters of this module. */
@@ -81,6 +90,7 @@ public:
         kHighCutGain,
         kLowFilterFreq,
         kHighFilterFreq,
+        kBandWidth,
         kDrive,
         kSampleRate,
         kBypass

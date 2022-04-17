@@ -94,6 +94,7 @@ private:
     void updateParametricParameters();
     
     TubeEQ<float> tubeEQModule;
+    void updateTubeEQParameters();
     
     viator_dsp::SVFilter<float> hpFilter;
     viator_dsp::SVFilter<float> lpFilter;

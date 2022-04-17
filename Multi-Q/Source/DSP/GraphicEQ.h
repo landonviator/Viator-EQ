@@ -43,41 +43,8 @@ public:
         filter8.process(context);
         filter9.process(context);
         filter10.process(context);
-        
-        for (int ch = 0; ch < numChannels; ++ch)
-        {
-            auto* input = inBlock.getChannelPointer(ch);
-            auto* output = outBlock.getChannelPointer (ch);
-                    
-            for (int sample = 0; sample < len; ++sample)
-            {
-                output[sample] = softClipData(input[sample]) * viator_utils::utils::dbToGain(2.0f);
-            }
-        }
     }
     
-    /** Soft Clip */
-    SampleType softClipData(SampleType dataToClip)
-    {
-        // Preamp
-        dataToClip *= mRawGain.getNextValue();
-        
-        // Soft clipper
-        dataToClip = mPiDivisor * std::atan(dataToClip);
-        
-        // Compensation
-        dataToClip *= 1.5;
-        
-        // Hard clip output
-        if (std::abs(dataToClip) >= 0.99)
-        {
-            dataToClip = std::copysign(0.99, dataToClip);
-        }
-        
-        // Output
-        return dataToClip *= viator_utils::utils::dbToGain(-mGainDB.getNextValue() * 0.75);
-    }
-
     /** The parameters of this module. */
     enum class ParameterId
     {
@@ -91,7 +58,6 @@ public:
         kFilter8Gain,
         kFilter9Gain,
         kFilter10Gain,
-        kDrive,
         kSampleRate,
         kBypass
     };

@@ -52,14 +52,6 @@ void ParametricEQ<SampleType>::setParameter(ParameterId parameter, SampleType pa
         case ParameterId::kFilter2Freq: filter2.setParameter(f::kCutoff, parameterValue); break;
         case ParameterId::kFilter3Freq: filter3.setParameter(f::kCutoff, parameterValue); break;
         case ParameterId::kFilter4Freq: filter4.setParameter(f::kCutoff, parameterValue); break;
-            
-        case ParameterId::kDrive:
-        {
-            mGainDB.setTargetValue(parameterValue);
-            mRawGain.setTargetValue(viator_utils::utils::dbToGain(parameterValue));
-            break;
-        }
-            
         case ParameterId::kSampleRate: mCurrentSampleRate = parameterValue; break;
         case ParameterId::kBypass: mGlobalBypass = static_cast<bool>(parameterValue);
     }

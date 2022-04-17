@@ -95,14 +95,6 @@ void GraphicEQ<SampleType>::setParameter(ParameterId parameter, SampleType param
         case ParameterId::kFilter8Gain: filter8.setParameter(f::kGain, parameterValue); break;
         case ParameterId::kFilter9Gain: filter9.setParameter(f::kGain, parameterValue); break;
         case ParameterId::kFilter10Gain: filter10.setParameter(f::kGain, parameterValue); break;
-            
-        case ParameterId::kDrive:
-        {
-            mGainDB.setTargetValue(parameterValue);
-            mRawGain.setTargetValue(viator_utils::utils::dbToGain(parameterValue));
-            break;
-        }
-            
         case ParameterId::kSampleRate: mCurrentSampleRate = parameterValue; break;
         case ParameterId::kBypass: mGlobalBypass = static_cast<bool>(parameterValue);
     }

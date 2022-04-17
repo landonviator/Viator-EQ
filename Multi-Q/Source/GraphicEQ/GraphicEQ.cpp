@@ -23,6 +23,4 @@ void MultiQAudioProcessor::updateGraphicParameters()
     graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter8Gain, treeState.getRawParameterValue(graphicFilter8GainID)->load());
     graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter9Gain, treeState.getRawParameterValue(graphicFilter9GainID)->load());
     graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter10Gain, treeState.getRawParameterValue(graphicFilter10GainID)->load());
-    graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kDrive, treeState.getRawParameterValue(driveID)->load());
-    graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kBypass, !treeState.getRawParameterValue(graphicEQONID)->load());
 }

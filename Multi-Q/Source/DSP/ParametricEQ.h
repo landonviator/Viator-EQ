@@ -37,32 +37,6 @@ public:
         filter2.process(context);
         filter3.process(context);
         filter4.process(context);
-        
-        for (int ch = 0; ch < numChannels; ++ch)
-        {
-            auto* input = inBlock.getChannelPointer(ch);
-            auto* output = outBlock.getChannelPointer (ch);
-
-            for (int sample = 0; sample < len; ++sample)
-            {
-                output[sample] = saturateData(input[sample]);
-            }
-        }
-    }
-    
-    SampleType saturateData(SampleType dataToSaturate)
-    {
-        auto x = dataToSaturate * mRawGain.getNextValue();
-
-        auto saturation = x - ((x * x * x) / 6.75);
-        
-        // Hard clip output
-        if (std::abs(saturation) >= 0.99)
-        {
-            saturation = std::copysign(0.99, saturation);
-        }
-
-        return saturation *= viator_utils::utils::dbToGain(-mGainDB.getNextValue());
     }
     
     /** The parameters of this module. */
@@ -76,7 +50,6 @@ public:
         kFilter2Freq,
         kFilter3Freq,
         kFilter4Freq,
-        kDrive,
         kSampleRate,
         kBypass
     };
