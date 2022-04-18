@@ -339,14 +339,20 @@ void MultiQAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock
     
     hpFilter.prepare(spec);
     hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kHighPass);
-    hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kGain, 0.01);
+    hpFilter.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+    hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 2000);
+    hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
     
     lpFilter.prepare(spec);
     lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kLowPass);
-    lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kGain, 0.01);
+    lpFilter.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
+    lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 2000);
+    lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
     
     gainModule.prepare(spec);
     gainModule.setRampDurationSeconds(0.02);
+    
+    updateCommonParameters();
 }
 
 void MultiQAudioProcessor::releaseResources()
