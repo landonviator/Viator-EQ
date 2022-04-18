@@ -37,6 +37,8 @@ private:
     viator_gui::Menu stereoMenu;
     
     std::unique_ptr <juce::AudioProcessorValueTreeState::ButtonAttachment> phaseButtonAttach;
+    std::unique_ptr <juce::AudioProcessorValueTreeState::ComboBoxAttachment> osAttach;
+    std::unique_ptr <juce::AudioProcessorValueTreeState::ComboBoxAttachment> msAttach;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (LV_Window)
 };

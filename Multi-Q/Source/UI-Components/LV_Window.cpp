@@ -22,12 +22,14 @@ LV_Window::LV_Window(MultiQAudioProcessor& p) : audioProcessor(p)
     osMenu.setText("Quality");
     osMenu.addItem("Normal", 1);
     osMenu.addItem("High", 2);
+    osAttach = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(audioProcessor.treeState, qualityID, osMenu);
     
     addAndMakeVisible(stereoMenu);
     stereoMenu.setText("M / S");
     stereoMenu.addItem("Stereo", 1);
     stereoMenu.addItem("Mid", 2);
     stereoMenu.addItem("Sides", 3);
+    msAttach = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(audioProcessor.treeState, msID, stereoMenu);
 }
 
 LV_Window::~LV_Window()
