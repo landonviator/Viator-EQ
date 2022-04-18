@@ -12,9 +12,6 @@
 
 void MultiQAudioProcessorEditor::uiConstructor()
 {
-    auto leftMargin = getWidth() * 0.075;
-    auto topMargin = getHeight() * 0.085;
-    
     // Window
     initWindow();
     addAndMakeVisible(windowComponent);

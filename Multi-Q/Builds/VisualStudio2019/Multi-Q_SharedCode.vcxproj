@@ -150,7 +150,6 @@
     <ClCompile Include="..\..\Source\UI-Methods\UI-Paint.cpp"/>
     <ClCompile Include="..\..\Source\UI-Methods\UI-Resized.cpp"/>
     <ClCompile Include="..\..\Source\UI-Methods\UI-SaveWindow.cpp"/>
-    <ClCompile Include="..\..\Source\UI-Components\OutputComponent.cpp"/>
     <ClCompile Include="..\..\Source\UI-Components\GraphicEQComponent.cpp"/>
     <ClCompile Include="..\..\Source\UI-Components\LV_Window.cpp"/>
     <ClCompile Include="..\..\Source\TubeEQComponent.cpp"/>
@@ -2275,7 +2274,6 @@
     <ClInclude Include="..\..\Source\DSP\GraphicEQ.h"/>
     <ClInclude Include="..\..\Source\DSP\ParametricEQ.h"/>
     <ClInclude Include="..\..\Source\DSP\TubeEQ.h"/>
-    <ClInclude Include="..\..\Source\UI-Components\OutputComponent.h"/>
     <ClInclude Include="..\..\Source\UI-Components\GraphicEQComponent.h"/>
     <ClInclude Include="..\..\Source\UI-Components\LV_Window.h"/>
     <ClInclude Include="..\..\Source\TubeEQComponent.h"/>

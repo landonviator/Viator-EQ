@@ -12,7 +12,6 @@
 #include "PluginProcessor.h"
 #include "./UI-Components/LV_Window.h"
 #include "./UI-Components/GraphicEQComponent.h"
-#include "./UI-Components/OutputComponent.h"
 #include "./UI-Components/ParametricEQComponent.h"
 #include "TubeEQComponent.h"
 

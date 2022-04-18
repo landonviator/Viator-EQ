@@ -25,9 +25,6 @@ public:
         jassert (inBlock.getNumChannels() == outBlock.getNumChannels());
         jassert (inBlock.getNumSamples() == outBlock.getNumSamples());
 
-        auto len         = inBlock.getNumSamples();
-        auto numChannels = inBlock.getNumChannels();
-
         if (mGlobalBypass)
         {
             return;
