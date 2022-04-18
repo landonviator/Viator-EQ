@@ -133,10 +133,10 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     auto pF2G = std::make_unique<juce::AudioParameterFloat>(parametricFilter2GainID, parametricFilter2GainName, -12.0f, 12.0f, 0.0f);
     auto pF3G = std::make_unique<juce::AudioParameterFloat>(parametricFilter3GainID, parametricFilter3GainName, -12.0f, 12.0f, 0.0f);
     auto pF4G = std::make_unique<juce::AudioParameterFloat>(parametricFilter4GainID, parametricFilter4GainName, -12.0f, 12.0f, 0.0f);
-    auto pF1F = std::make_unique<juce::AudioParameterFloat>(parametricFilter1FreqID, parametricFilter1FreqName, 30.0f, 400.0f, 200.0f);
-    auto pF2F = std::make_unique<juce::AudioParameterFloat>(parametricFilter2FreqID, parametricFilter2FreqName, 200.0f, 2000.0f, 1000.0f);
-    auto pF3F = std::make_unique<juce::AudioParameterFloat>(parametricFilter3FreqID, parametricFilter3FreqName, 200.0f, 2000.0f, 1000.0f);
-    auto pF4F = std::make_unique<juce::AudioParameterFloat>(parametricFilter4FreqID, parametricFilter4FreqName, 1000.0f, 20000.0f, 7000.0f);
+    auto pF1F = std::make_unique<juce::AudioParameterInt>(parametricFilter1FreqID, parametricFilter1FreqName, 30, 400, 200.0f);
+    auto pF2F = std::make_unique<juce::AudioParameterInt>(parametricFilter2FreqID, parametricFilter2FreqName, 200, 2000, 1000);
+    auto pF3F = std::make_unique<juce::AudioParameterInt>(parametricFilter3FreqID, parametricFilter3FreqName, 200, 2000, 1000);
+    auto pF4F = std::make_unique<juce::AudioParameterInt>(parametricFilter4FreqID, parametricFilter4FreqName, 1000, 20000, 7000);
     
     auto tLB = std::make_unique<juce::AudioParameterFloat>(tubeLowBoostID, tubeLowBoostName, 0.0f, 10.0f, 0.0f);
     auto tLC = std::make_unique<juce::AudioParameterFloat>(tubeLowCutID, tubeLowCutName, 0.0f, 10.0f, 0.0f);

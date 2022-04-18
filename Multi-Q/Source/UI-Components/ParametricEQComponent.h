@@ -11,6 +11,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "../PluginProcessor.h"
 
 //==============================================================================
 /*
@@ -18,13 +19,15 @@
 class ParametricEQComponent  : public juce::Component
 {
 public:
-    ParametricEQComponent();
+    ParametricEQComponent(MultiQAudioProcessor& p);
     ~ParametricEQComponent() override;
 
     void paint (juce::Graphics&) override;
     void resized() override;
 
 private:
+    
+    MultiQAudioProcessor& audioProcessor;
     
     viator_gui::Dial band1GainDial {" dB", "Low Gain", -12.0, 12.0, 0.01, 0.0};
     viator_gui::Label band1Label;
@@ -49,6 +52,17 @@ private:
 
     viator_gui::Dial band4FreqDial {" Hz", "High Freq", 1000.0, 20000.0, 1.0, 0.0};
     viator_gui::Label band4FreqLabel;
+    
+    using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
+    std::unique_ptr<SliderAttachment> band1GainDialAttach;
+    std::unique_ptr<SliderAttachment> band2GainDialAttach;
+    std::unique_ptr<SliderAttachment> band3GainDialAttach;
+    std::unique_ptr<SliderAttachment> band4GainDialAttach;
+    
+    std::unique_ptr<SliderAttachment> band1FreqDialAttach;
+    std::unique_ptr<SliderAttachment> band2FreqDialAttach;
+    std::unique_ptr<SliderAttachment> band3FreqDialAttach;
+    std::unique_ptr<SliderAttachment> band4FreqDialAttach;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ParametricEQComponent)
 };

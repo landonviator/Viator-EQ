@@ -95,13 +95,20 @@ GraphicEQComponent::GraphicEQComponent(MultiQAudioProcessor& p) : audioProcessor
     band10Label.setText("15K", juce::dontSendNotification);
     band10Label.attachToComponent(&band10, false);
     band10Label.setJustificationType(juce::Justification::centred);
-    
-    
 }
 
 GraphicEQComponent::~GraphicEQComponent()
 {
-    DBG("Destroyed");
+    band1FaderAttach = nullptr;
+    band2FaderAttach = nullptr;
+    band3FaderAttach = nullptr;
+    band4FaderAttach = nullptr;
+    band5FaderAttach = nullptr;
+    band6FaderAttach = nullptr;
+    band7FaderAttach = nullptr;
+    band8FaderAttach = nullptr;
+    band9FaderAttach = nullptr;
+    band10FaderAttach = nullptr;
 }
 
 void GraphicEQComponent::paint (juce::Graphics& g)
