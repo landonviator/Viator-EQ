@@ -11,6 +11,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "PluginProcessor.h"
 
 //==============================================================================
 /*
@@ -18,13 +19,15 @@
 class TubeEQComponent  : public juce::Component
 {
 public:
-    TubeEQComponent();
+    TubeEQComponent(MultiQAudioProcessor& p);
     ~TubeEQComponent() override;
 
     void paint (juce::Graphics&) override;
     void resized() override;
 
 private:
+    
+    MultiQAudioProcessor& audioProcessor;
     
     viator_gui::Dial lowBoostDial {" dB", "Low Boost", 0.0, 10.0, 0.1, 0.0};
     viator_gui::Label lowBoostLabel;
@@ -46,6 +49,15 @@ private:
     
     viator_gui::Dial highFreqDial {" Hz", "High Freq", 1000.0, 16000.0, 1.0, 0.0};
     viator_gui::Label highFreqLabel;
+    
+    using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
+    std::unique_ptr<SliderAttachment> lowBoostAttach;
+    std::unique_ptr<SliderAttachment> lowCutAttach;
+    std::unique_ptr<SliderAttachment> lowFreqAttach;
+    std::unique_ptr<SliderAttachment> bandwidthAttach;
+    std::unique_ptr<SliderAttachment> highBoostAttach;
+    std::unique_ptr<SliderAttachment> highCutAttach;
+    std::unique_ptr<SliderAttachment> highFreqAttach;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TubeEQComponent)
 };
