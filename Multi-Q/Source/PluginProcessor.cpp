@@ -154,8 +154,8 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     auto pQuality = std::make_unique<juce::AudioParameterInt>(qualityID, qualityName, 0, 1, 0);
     auto pMS = std::make_unique<juce::AudioParameterInt>(msID, msName, 0, 2, 0);
     
-    auto hpParam = std::make_unique<juce::AudioParameterInt>(highpassID, highpassName, 20, 1000, 20);
-    auto lpParam = std::make_unique<juce::AudioParameterInt>(lowpassID, lowpassName, 1000, 20000, 20000);
+    auto hpParam = std::make_unique<juce::AudioParameterFloat>(highpassID, highpassName, juce::NormalisableRange<float>(20.0f, 1000.0f, 1.0f, 0.3f, false), 20.0f);
+    auto lpParam = std::make_unique<juce::AudioParameterFloat>(lowpassID, lowpassName, juce::NormalisableRange<float>(1000.0f, 20000.0f, 1.0f, 0.3f, false), 20000.0f);
     
     auto driveParam = std::make_unique<juce::AudioParameterFloat>(driveID, driveName, 0.0f, 20.0f, 0.0f);
     auto trimParam = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -24.0f, 24.0f, 0.0f);
@@ -340,13 +340,13 @@ void MultiQAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock
     hpFilter.prepare(spec);
     hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kHighPass);
     hpFilter.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
-    hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 2000);
+    hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 20.0);
     hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
     
     lpFilter.prepare(spec);
     lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kLowPass);
     lpFilter.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
-    lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 2000);
+    lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 20000.0);
     lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
     
     gainModule.prepare(spec);
@@ -436,8 +436,8 @@ bool MultiQAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* MultiQAudioProcessor::createEditor()
 {
-    //return new MultiQAudioProcessorEditor (*this);
-    return new juce::GenericAudioProcessorEditor (*this);
+    return new MultiQAudioProcessorEditor (*this);
+    //return new juce::GenericAudioProcessorEditor (*this);
 }
 
 //==============================================================================
