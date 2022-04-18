@@ -12,6 +12,9 @@
 
 void MultiQAudioProcessorEditor::uiConstructor()
 {
+    auto leftMargin = getWidth() * 0.075;
+    auto topMargin = getHeight() * 0.085;
+    
     // Window
     initWindow();
     addAndMakeVisible(windowComponent);
@@ -59,6 +62,7 @@ void MultiQAudioProcessorEditor::uiConstructor()
     {
         graphicEQComponent.setVisible(graphicEQButton.getToggleState());
         graphicEQComponent.setEnabled(graphicEQButton.getToggleState());
+        resized();
     };
     
     // Parametric
@@ -70,6 +74,7 @@ void MultiQAudioProcessorEditor::uiConstructor()
     {
         parametricEQComponent.setVisible(paraEQButton.getToggleState());
         parametricEQComponent.setEnabled(paraEQButton.getToggleState());
+        resized();
     };
     
     // Tube
@@ -81,6 +86,7 @@ void MultiQAudioProcessorEditor::uiConstructor()
     {
         tubeEQComponent.setVisible(tubeEQButton.getToggleState());
         tubeEQComponent.setEnabled(tubeEQButton.getToggleState());
+        resized();
     };
     
     // EQ Components

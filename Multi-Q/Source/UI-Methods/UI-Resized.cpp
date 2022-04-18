@@ -19,13 +19,22 @@ void MultiQAudioProcessorEditor::uiResized()
     windowComponent.setBounds(getLocalBounds());
     
     // Graphic EQ Component
-    graphicEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    if (audioProcessor.treeState.getRawParameterValue(graphicEQONID)->load())
+    {
+        graphicEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    }
     
     // Parametric EQ
-    parametricEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    if (audioProcessor.treeState.getRawParameterValue(paraEQONID)->load())
+    {
+        parametricEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    }
     
     // Tube EQ
-    tubeEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    if (audioProcessor.treeState.getRawParameterValue(tubeEQONID)->load())
+    {
+        tubeEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    }
     
     // Output
     auto leftOutputMargin = getWidth() * 0.64;
