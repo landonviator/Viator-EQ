@@ -430,8 +430,8 @@ bool MultiQAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* MultiQAudioProcessor::createEditor()
 {
-    return new MultiQAudioProcessorEditor (*this);
-    //return new juce::GenericAudioProcessorEditor (*this);
+    //return new MultiQAudioProcessorEditor (*this);
+    return new juce::GenericAudioProcessorEditor (*this);
 }
 
 //==============================================================================

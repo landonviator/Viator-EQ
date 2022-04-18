@@ -12,10 +12,11 @@
 #include "LV_Window.h"
 
 //==============================================================================
-LV_Window::LV_Window()
+LV_Window::LV_Window(MultiQAudioProcessor& p) : audioProcessor(p)
 {
     addAndMakeVisible(phaseToggle);
     phaseToggle.setToggleStyle(viator_gui::Toggle::ToggleStyle::kPhase);
+    phaseButtonAttach = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(audioProcessor.treeState, phaseID, phaseToggle);
     
     addAndMakeVisible(osMenu);
     osMenu.setText("Quality");

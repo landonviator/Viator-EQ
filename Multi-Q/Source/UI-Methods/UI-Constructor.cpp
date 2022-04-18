@@ -48,9 +48,6 @@ void MultiQAudioProcessorEditor::uiConstructor()
     trimFaderLabel.setText("Trim", juce::dontSendNotification);
     trimFaderLabel.attachToComponent(&trimFader, false);
     trimFaderLabel.setJustificationType(juce::Justification::centred);
-
-    // Phase
-    addAndMakeVisible(phaseToggle);
     
     // Choice buttons
     // Graphic

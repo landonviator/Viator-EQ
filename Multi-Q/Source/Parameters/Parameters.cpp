@@ -13,7 +13,8 @@
 void MultiQAudioProcessor::updateCommonParameters()
 {
     osToggle = static_cast<bool>(treeState.getRawParameterValue(qualityID)->load());
-    phaseToggle = static_cast<bool>(treeState.getRawParameterValue(phaseID)->load());
+    phaseToggle = treeState.getRawParameterValue(phaseID)->load();
+    DBG(static_cast<int>(phaseToggle));
     hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, treeState.getRawParameterValue(highpassID)->load());
     lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, treeState.getRawParameterValue(lowpassID)->load());
     gainModule.setGainDecibels(treeState.getRawParameterValue(trimID)->load());

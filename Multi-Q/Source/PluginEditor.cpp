@@ -11,7 +11,7 @@
 
 //==============================================================================
 MultiQAudioProcessorEditor::MultiQAudioProcessorEditor (MultiQAudioProcessor& p)
-    : AudioProcessorEditor (&p), audioProcessor (p)
+    : AudioProcessorEditor (&p), audioProcessor (p), windowComponent(audioProcessor)
 {
     uiConstructor();
 }
