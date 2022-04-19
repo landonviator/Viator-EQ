@@ -58,7 +58,7 @@ public:
         // Preamp
         dataToClip *= mRawGain.getNextValue();
         
-        //dataToClip += 0.15;
+        dataToClip += 0.25;
             
         // Tube logic
         if (dataToClip < 0.0)
@@ -74,7 +74,7 @@ public:
             }
         }
         
-        //dataToClip -= 0.15;
+        dataToClip -= 0.25;
             
             // Output
         return dataToClip *= viator_utils::utils::dbToGain(-mGainDB.getNextValue() * 0.75);

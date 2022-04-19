@@ -14,7 +14,6 @@ void MultiQAudioProcessor::updateCommonParameters()
 {
     osToggle = static_cast<bool>(treeState.getRawParameterValue(qualityID)->load());
     phaseToggle = treeState.getRawParameterValue(phaseID)->load();
-    DBG(static_cast<int>(phaseToggle));
     
     hpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, treeState.getRawParameterValue(highpassID)->load());
     lpFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, treeState.getRawParameterValue(lowpassID)->load());
