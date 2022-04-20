@@ -28,15 +28,12 @@ public:
         auto len         = inBlock.getNumSamples();
         auto numChannels = inBlock.getNumChannels();
 
-        if (mGlobalBypass)
-        {
-            return;
-        }
-
         lowBoostFilter.process(context);
         lowCutFilter.process(context);
         highBoostFilter.process(context);
         highCutFilter.process(context);
+        
+        if (mRawGain.getNextValue() == 1.0) return;
         
         for (int ch = 0; ch < numChannels; ++ch)
         {
@@ -52,9 +49,6 @@ public:
     
     SampleType tubeDistortion(SampleType dataToClip)
     {
-        
-        if (mRawGain.getNextValue() == 1.0) return dataToClip;
-        
         // Preamp
         dataToClip *= mRawGain.getNextValue();
         

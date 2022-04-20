@@ -18,11 +18,6 @@ public:
     template <typename ProcessContext>
     void process (const ProcessContext& context) noexcept
     {
-        if (mGlobalBypass)
-        {
-            return;
-        }
-
         filter1.process(context);
         filter2.process(context);
         filter3.process(context);
