@@ -20,60 +20,70 @@ void GraphicEQ<SampleType>::prepare(const juce::dsp::ProcessSpec& spec)
     filter1.prepare(spec);
     filter1.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter1.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter1.setParameter(viator_dsp::SVFilter<float>::ParameterId::kSampleRate, mCurrentSampleRate);
     filter1.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 31);
     filter1.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kProportional);
     
     filter2.prepare(spec);
     filter2.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter2.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter2.setParameter(viator_dsp::SVFilter<float>::ParameterId::kSampleRate, mCurrentSampleRate);
     filter2.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 63);
     filter2.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kProportional);
     
     filter3.prepare(spec);
     filter3.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter3.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter3.setParameter(viator_dsp::SVFilter<float>::ParameterId::kSampleRate, mCurrentSampleRate);
     filter3.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 125);
     filter3.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kProportional);
     
     filter4.prepare(spec);
     filter4.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter4.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter4.setParameter(viator_dsp::SVFilter<float>::ParameterId::kSampleRate, mCurrentSampleRate);
     filter4.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 250);
     filter4.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kProportional);
     
     filter5.prepare(spec);
     filter5.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter5.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter5.setParameter(viator_dsp::SVFilter<float>::ParameterId::kSampleRate, mCurrentSampleRate);
     filter5.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 500);
     filter5.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kProportional);
     
     filter6.prepare(spec);
     filter6.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter6.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter6.setParameter(viator_dsp::SVFilter<float>::ParameterId::kSampleRate, mCurrentSampleRate);
     filter6.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 1000);
     filter6.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kProportional);
     
     filter7.prepare(spec);
     filter7.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter7.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter7.setParameter(viator_dsp::SVFilter<float>::ParameterId::kSampleRate, mCurrentSampleRate);
     filter7.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 2000);
     filter7.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kProportional);
     
     filter8.prepare(spec);
     filter8.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter8.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter8.setParameter(viator_dsp::SVFilter<float>::ParameterId::kSampleRate, mCurrentSampleRate);
     filter8.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 4000);
     filter8.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kProportional);
     
     filter9.prepare(spec);
     filter9.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter9.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter9.setParameter(viator_dsp::SVFilter<float>::ParameterId::kSampleRate, mCurrentSampleRate);
     filter9.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 8000);
     filter9.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kProportional);
     
     filter10.prepare(spec);
     filter10.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter10.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter10.setParameter(viator_dsp::SVFilter<float>::ParameterId::kSampleRate, mCurrentSampleRate);
     filter10.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 15000);
     filter10.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kProportional);
     

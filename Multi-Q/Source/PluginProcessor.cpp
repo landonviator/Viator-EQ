@@ -404,7 +404,7 @@ void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
         lpFilter.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
         gainModule.process(juce::dsp::ProcessContextReplacing<float>(upSampledBlock));
         oversamplingModule.processSamplesDown(block);
-        
+
         if (phaseToggle)
         {
             viator_utils::utils::invertBlock(block);
@@ -420,7 +420,7 @@ void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
         hpFilter.process(juce::dsp::ProcessContextReplacing<float>(block));
         lpFilter.process(juce::dsp::ProcessContextReplacing<float>(block));
         gainModule.process(juce::dsp::ProcessContextReplacing<float>(block));
-        
+
         if (phaseToggle)
         {
             viator_utils::utils::invertBlock(block);

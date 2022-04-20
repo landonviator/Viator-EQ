@@ -47,5 +47,5 @@ void MultiQAudioProcessorEditor::initWindow()
         setSize (width, height);
     }
     
-    constructorFinished = true;    
+    constructorFinished = true;
 }
