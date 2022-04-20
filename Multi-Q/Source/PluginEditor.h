@@ -81,6 +81,24 @@ private:
     std::unique_ptr <juce::AudioProcessorValueTreeState::ButtonAttachment> graphicButtonAttach;
     std::unique_ptr <juce::AudioProcessorValueTreeState::ButtonAttachment> parametricButtonAttach;
     std::unique_ptr <juce::AudioProcessorValueTreeState::ButtonAttachment> tubeButtonAttach;
+    
+    /** Container for Faders */
+    std::vector<viator_gui::Fader*> faders =
+    {
+        &hpFader, &lpFader, &driveFader, &trimFader
+    };
+    
+    /** Container for Labels */
+    std::vector<viator_gui::Label*> labels =
+    {
+        &hpFaderLabel, &lpFaderLabel, &driveFaderLabel, &trimFaderLabel
+    };
+    
+    /** Container for Text */
+    std::vector<juce::String> labelTexts =
+    {
+        "HP", "LP", "Drive", "Trim"
+    };
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessorEditor)
 };

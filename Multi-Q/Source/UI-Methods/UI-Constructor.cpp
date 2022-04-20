@@ -17,37 +17,19 @@ void MultiQAudioProcessorEditor::uiConstructor()
     addAndMakeVisible(windowComponent);
     
     // Output
-    // Highpass
-    addAndMakeVisible(hpFader);
+    for (int i = 0; i < faders.size(); ++i)
+    {
+        addAndMakeVisible(faders[i]);
+        addAndMakeVisible(labels[i]);
+        labels[i]->setText(labelTexts[i], juce::dontSendNotification);
+        labels[i]->attachToComponent(faders[i], false);
+        labels[i]->setJustificationType(juce::Justification::centred);
+    }
+    
     hpFaderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, highpassID, hpFader);
-    addAndMakeVisible(hpFaderLabel);
-    hpFaderLabel.setText("HP", juce::dontSendNotification);
-    hpFaderLabel.attachToComponent(&hpFader, false);
-    hpFaderLabel.setJustificationType(juce::Justification::centred);
-
-    // Lowpass
-    addAndMakeVisible(lpFader);
     lpFaderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, lowpassID, lpFader);
-    addAndMakeVisible(lpFaderLabel);
-    lpFaderLabel.setText("LP", juce::dontSendNotification);
-    lpFaderLabel.attachToComponent(&lpFader, false);
-    lpFaderLabel.setJustificationType(juce::Justification::centred);
-
-    // Drive
-    addAndMakeVisible(driveFader);
     driveFaderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, driveID, driveFader);
-    addAndMakeVisible(driveFaderLabel);
-    driveFaderLabel.setText("Drive", juce::dontSendNotification);
-    driveFaderLabel.attachToComponent(&driveFader, false);
-    driveFaderLabel.setJustificationType(juce::Justification::centred);
-
-    // Trim
-    addAndMakeVisible(trimFader);
     trimFaderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimID, trimFader);
-    addAndMakeVisible(trimFaderLabel);
-    trimFaderLabel.setText("Trim", juce::dontSendNotification);
-    trimFaderLabel.attachToComponent(&trimFader, false);
-    trimFaderLabel.setJustificationType(juce::Justification::centred);
     
     // Choice buttons
     // Graphic

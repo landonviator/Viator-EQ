@@ -23,6 +23,33 @@ tubeEQComponent(audioProcessor)
 
 MultiQAudioProcessorEditor::~MultiQAudioProcessorEditor()
 {
+    for (auto& fader : faders)
+    {
+        fader = nullptr;
+    }
+    
+    faders.clear();
+    faders.shrink_to_fit();
+    
+    for (auto& label : labels)
+    {
+        label = nullptr;
+    }
+    
+    labels.clear();
+    labels.shrink_to_fit();
+    
+    labelTexts.clear();
+    labelTexts.shrink_to_fit();
+    
+    hpFaderAttach = nullptr;
+    lpFaderAttach = nullptr;
+    driveFaderAttach = nullptr;
+    trimFaderAttach = nullptr;
+    
+    graphicButtonAttach = nullptr;
+    parametricButtonAttach = nullptr;
+    tubeButtonAttach = nullptr;
 }
 
 //==============================================================================

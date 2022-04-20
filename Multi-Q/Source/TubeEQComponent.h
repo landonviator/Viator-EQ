@@ -29,6 +29,7 @@ private:
     
     MultiQAudioProcessor& audioProcessor;
     
+    /** Dials and Labels*/
     viator_gui::Dial lowBoostDial {" dB", "Low Boost", 0.0, 10.0, 0.1, 0.0};
     viator_gui::Label lowBoostLabel;
     
@@ -50,6 +51,7 @@ private:
     viator_gui::Dial highFreqDial {" Hz", "High Freq", 1000.0, 16000.0, 1.0, 0.0};
     viator_gui::Label highFreqLabel;
     
+    /** Attachments*/
     using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
     std::unique_ptr<SliderAttachment> lowBoostAttach;
     std::unique_ptr<SliderAttachment> lowCutAttach;
@@ -58,6 +60,24 @@ private:
     std::unique_ptr<SliderAttachment> highBoostAttach;
     std::unique_ptr<SliderAttachment> highCutAttach;
     std::unique_ptr<SliderAttachment> highFreqAttach;
+    
+    /** Container for Dials */
+    std::vector<viator_gui::Dial*> dials =
+    {
+        &lowBoostDial, &lowCutDial, &lowFreqDial, &bandwidthDial, &highBoostDial, &highCutDial, &highFreqDial
+    };
+    
+    /** Container for Labels */
+    std::vector<viator_gui::Label*> labels =
+    {
+        &lowBoostLabel, &lowCutLabel, &lowFreqLabel, &bandwidthLabel, &highBoostLabel, &highCutLabel, &highFreqLabel
+    };
+    
+    /** Container for Text */
+    std::vector<juce::String> labelTexts =
+    {
+        "Low Boost", "Low Cut", "Low Freq", "Band Width", "High Boost", "High Cut", "High Freq"
+    };
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TubeEQComponent)
 };

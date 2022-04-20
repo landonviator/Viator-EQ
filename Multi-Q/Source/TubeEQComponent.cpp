@@ -16,69 +16,45 @@ TubeEQComponent::TubeEQComponent(MultiQAudioProcessor& p) : audioProcessor(p)
 {
     using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
     
-    addAndMakeVisible(lowBoostDial);
+    for (int i = 0; i < dials.size(); i++)
+    {
+        addAndMakeVisible(dials[i]);
+        addAndMakeVisible(labels[i]);
+        labels[i]->setText(labelTexts[i], juce::dontSendNotification);
+        labels[i]->attachToComponent(dials[i], false);
+        labels[i]->setJustificationType(juce::Justification::centred);
+    }
+    
     lowBoostAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeLowBoostID, lowBoostDial);
-
-    addAndMakeVisible(lowBoostLabel);
-    lowBoostLabel.setText("Low Boost", juce::dontSendNotification);
-    lowBoostLabel.attachToComponent(&lowBoostDial, false);
-    lowBoostLabel.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(lowCutDial);
     lowCutAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeLowCutID, lowCutDial);
-
-    addAndMakeVisible(lowCutLabel);
-    lowCutLabel.setText("Low Cut", juce::dontSendNotification);
-    lowCutLabel.attachToComponent(&lowCutDial, false);
-    lowCutLabel.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(highBoostDial);
     highBoostAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeHighBoostID, highBoostDial);
-
-    addAndMakeVisible(highBoostLabel);
-    highBoostLabel.setText("High Boost", juce::dontSendNotification);
-    highBoostLabel.attachToComponent(&highBoostDial, false);
-    highBoostLabel.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(highCutDial);
     highCutAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeHighCutID, highCutDial);
-
-    addAndMakeVisible(highCutLabel);
-    highCutLabel.setText("High Cut", juce::dontSendNotification);
-    highCutLabel.attachToComponent(&highCutDial, false);
-    highCutLabel.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(lowFreqDial);
     lowFreqAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeLowFreqID, lowFreqDial);
-
-    lowFreqDial.setSkewFactorFromMidPoint(100.0);
-    addAndMakeVisible(lowFreqLabel);
-    lowFreqLabel.setText("Low Freq", juce::dontSendNotification);
-    lowFreqLabel.attachToComponent(&lowFreqDial, false);
-    lowFreqLabel.setJustificationType(juce::Justification::centred);
-    
-    
-    addAndMakeVisible(highFreqDial);
     highFreqAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeHighFreqID, highFreqDial);
-
-    highFreqDial.setSkewFactorFromMidPoint(5000.0);
-    addAndMakeVisible(highFreqLabel);
-    highFreqLabel.setText("High Freq", juce::dontSendNotification);
-    highFreqLabel.attachToComponent(&highFreqDial, false);
-    highFreqLabel.setJustificationType(juce::Justification::centred);
-    
-    
-    addAndMakeVisible(bandwidthDial);
     bandwidthAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeFilterBWID, bandwidthDial);
-
-    addAndMakeVisible(bandwidthLabel);
-    bandwidthLabel.setText("BW", juce::dontSendNotification);
-    bandwidthLabel.attachToComponent(&bandwidthDial, false);
-    bandwidthLabel.setJustificationType(juce::Justification::centred);
 }
 
 TubeEQComponent::~TubeEQComponent()
 {
+    for (auto& dial : dials)
+    {
+        dial = nullptr;
+    }
+    
+    dials.clear();
+    dials.shrink_to_fit();
+    
+    for (auto& label : labels)
+    {
+        label = nullptr;
+    }
+    
+    labels.clear();
+    labels.shrink_to_fit();
+    
+    labelTexts.clear();
+    labelTexts.shrink_to_fit();
+    
     lowBoostAttach = nullptr;
     lowCutAttach = nullptr;
     lowFreqAttach = nullptr;
@@ -86,6 +62,7 @@ TubeEQComponent::~TubeEQComponent()
     highBoostAttach = nullptr;
     highCutAttach = nullptr;
     highFreqAttach = nullptr;
+    
 }
 
 void TubeEQComponent::paint (juce::Graphics& g)

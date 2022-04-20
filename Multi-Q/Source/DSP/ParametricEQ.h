@@ -18,13 +18,6 @@ public:
     template <typename ProcessContext>
     void process (const ProcessContext& context) noexcept
     {
-        
-        auto&& inBlock  = context.getInputBlock();
-        auto&& outBlock = context.getOutputBlock();
-
-        jassert (inBlock.getNumChannels() == outBlock.getNumChannels());
-        jassert (inBlock.getNumSamples() == outBlock.getNumSamples());
-
         if (mGlobalBypass)
         {
             return;

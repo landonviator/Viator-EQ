@@ -16,73 +16,46 @@ ParametricEQComponent::ParametricEQComponent(MultiQAudioProcessor& p) : audioPro
 {
     using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
     
-    addAndMakeVisible(band1GainDial);
+    for (int i = 0; i < dials.size(); i++)
+    {
+        addAndMakeVisible(dials[i]);
+        addAndMakeVisible(labels[i]);
+        labels[i]->setText(labelTexts[i], juce::dontSendNotification);
+        labels[i]->attachToComponent(dials[i], false);
+        labels[i]->setJustificationType(juce::Justification::centred);
+    }
+    
     band1GainDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter1GainID, band1GainDial);
-
-    addAndMakeVisible(band1Label);
-    band1Label.setText("Low Gain", juce::dontSendNotification);
-    band1Label.attachToComponent(&band1GainDial, false);
-    band1Label.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(band2GainDial);
     band2GainDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter2GainID, band2GainDial);
-
-    addAndMakeVisible(band2Label);
-    band2Label.setText("Mid Gain", juce::dontSendNotification);
-    band2Label.attachToComponent(&band2GainDial, false);
-    band2Label.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(band3GainDial);
     band3GainDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter3GainID, band3GainDial);
-
-    addAndMakeVisible(band3Label);
-    band3Label.setText("Mid Gain", juce::dontSendNotification);
-    band3Label.attachToComponent(&band3GainDial, false);
-    band3Label.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(band4GainDial);
     band4GainDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter4GainID, band4GainDial);
-
-    addAndMakeVisible(band4Label);
-    band4Label.setText("High Gain", juce::dontSendNotification);
-    band4Label.attachToComponent(&band4GainDial, false);
-    band4Label.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(band1FreqDial);
     band1FreqDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter1FreqID, band1FreqDial);
-
-    addAndMakeVisible(band1FreqLabel);
-    band1FreqLabel.setText("Low Freq", juce::dontSendNotification);
-    band1FreqLabel.attachToComponent(&band1FreqDial, false);
-    band1FreqLabel.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(band2FreqDial);
     band2FreqDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter2FreqID, band2FreqDial);
-
-    addAndMakeVisible(band2FreqLabel);
-    band2FreqLabel.setText("Mid Freq", juce::dontSendNotification);
-    band2FreqLabel.attachToComponent(&band2FreqDial, false);
-    band2FreqLabel.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(band3FreqDial);
     band3FreqDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter3FreqID, band3FreqDial);
-
-    addAndMakeVisible(band3FreqLabel);
-    band3FreqLabel.setText("Mid Freq", juce::dontSendNotification);
-    band3FreqLabel.attachToComponent(&band3FreqDial, false);
-    band3FreqLabel.setJustificationType(juce::Justification::centred);
-    
-    addAndMakeVisible(band4FreqDial);
     band4FreqDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter4FreqID, band4FreqDial);
-
-    addAndMakeVisible(band4FreqLabel);
-    band4FreqLabel.setText("High Freq", juce::dontSendNotification);
-    band4FreqLabel.attachToComponent(&band4FreqDial, false);
-    band4FreqLabel.setJustificationType(juce::Justification::centred);
 }
 
 ParametricEQComponent::~ParametricEQComponent()
 {
+    for (auto& dial : dials)
+    {
+        dial = nullptr;
+    }
+    
+    dials.clear();
+    dials.shrink_to_fit();
+    
+    for (auto& label : labels)
+    {
+        label = nullptr;
+    }
+    
+    labels.clear();
+    labels.shrink_to_fit();
+    
+    labelTexts.clear();
+    labelTexts.shrink_to_fit();
+    
     band1GainDialAttach = nullptr;
     band2GainDialAttach = nullptr;
     band3GainDialAttach = nullptr;
@@ -92,6 +65,7 @@ ParametricEQComponent::~ParametricEQComponent()
     band2FreqDialAttach = nullptr;
     band3FreqDialAttach = nullptr;
     band4FreqDialAttach = nullptr;
+    
 }
 
 void ParametricEQComponent::paint (juce::Graphics& g)

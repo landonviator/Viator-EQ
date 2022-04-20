@@ -20,6 +20,7 @@ void ParametricEQ<SampleType>::prepare(const juce::dsp::ProcessSpec& spec)
     filter1.prepare(spec);
     filter1.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter1.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kLowShelf);
+    filter1.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
     filter1.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 200);
     
     filter2.prepare(spec);
@@ -35,6 +36,7 @@ void ParametricEQ<SampleType>::prepare(const juce::dsp::ProcessSpec& spec)
     filter4.prepare(spec);
     filter4.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter4.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kHighShelf);
+    filter4.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
     filter4.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 5000);
 }
 

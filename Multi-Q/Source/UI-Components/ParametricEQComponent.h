@@ -29,6 +29,7 @@ private:
     
     MultiQAudioProcessor& audioProcessor;
     
+    /** Dials and Labels*/
     viator_gui::Dial band1GainDial {" dB", "Low Gain", -12.0, 12.0, 0.01, 0.0};
     viator_gui::Label band1Label;
 
@@ -53,6 +54,7 @@ private:
     viator_gui::Dial band4FreqDial {" Hz", "High Freq", 1000.0, 20000.0, 1.0, 0.0};
     viator_gui::Label band4FreqLabel;
     
+    /** Attachments*/
     using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
     std::unique_ptr<SliderAttachment> band1GainDialAttach;
     std::unique_ptr<SliderAttachment> band2GainDialAttach;
@@ -63,6 +65,24 @@ private:
     std::unique_ptr<SliderAttachment> band2FreqDialAttach;
     std::unique_ptr<SliderAttachment> band3FreqDialAttach;
     std::unique_ptr<SliderAttachment> band4FreqDialAttach;
+    
+    /** Container for Dials */
+    std::vector<viator_gui::Dial*> dials =
+    {
+        &band1GainDial, &band2GainDial, &band3GainDial, &band4GainDial, &band1FreqDial, &band2FreqDial, &band3FreqDial, &band4FreqDial
+    };
+    
+    /** Container for Labels */
+    std::vector<viator_gui::Label*> labels =
+    {
+        &band1Label, &band2Label, &band3Label, &band4Label, &band1FreqLabel, &band2FreqLabel, &band3FreqLabel, &band4FreqLabel
+    };
+    
+    /** Container for Text */
+    std::vector<juce::String> labelTexts =
+    {
+        "Low Gain", "Mid Gain", "Mid Gain", "High Gain", "Low Freq", "Mid Freq", "Mid Freq", "High Freq"
+    };
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ParametricEQComponent)
 };
