@@ -75,6 +75,47 @@ public:
     float windowWidth {0.0f};
     float windowHeight {0.0f};
 
+    void updateGraphicParameters()
+    {
+        graphicEQModule.setStereoType(static_cast<int>(treeState.getRawParameterValue(msID)->load()));
+        graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter1Gain, treeState.getRawParameterValue(graphicFilter1GainID)->load());
+        graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter2Gain, treeState.getRawParameterValue(graphicFilter2GainID)->load());
+        graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter3Gain, treeState.getRawParameterValue(graphicFilter3GainID)->load());
+        graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter4Gain, treeState.getRawParameterValue(graphicFilter4GainID)->load());
+        graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter5Gain, treeState.getRawParameterValue(graphicFilter5GainID)->load());
+        graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter6Gain, treeState.getRawParameterValue(graphicFilter6GainID)->load());
+        graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter7Gain, treeState.getRawParameterValue(graphicFilter7GainID)->load());
+        graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter8Gain, treeState.getRawParameterValue(graphicFilter8GainID)->load());
+        graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter9Gain, treeState.getRawParameterValue(graphicFilter9GainID)->load());
+        graphicEQModule.setParameter(GraphicEQ<float>::ParameterId::kFilter10Gain, treeState.getRawParameterValue(graphicFilter10GainID)->load());
+    }
+
+    void updateParametricParameters()
+    {
+        parametricEQModule.setStereoType(static_cast<int>(treeState.getRawParameterValue(msID)->load()));
+        parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter1Gain, treeState.getRawParameterValue(parametricFilter1GainID)->load());
+        parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter2Gain, treeState.getRawParameterValue(parametricFilter2GainID)->load());
+        parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter3Gain, treeState.getRawParameterValue(parametricFilter3GainID)->load());
+        parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter4Gain, treeState.getRawParameterValue(parametricFilter4GainID)->load());
+        parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter1Freq, treeState.getRawParameterValue(parametricFilter1FreqID)->load());
+        parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter2Freq, treeState.getRawParameterValue(parametricFilter2FreqID)->load());
+        parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter3Freq, treeState.getRawParameterValue(parametricFilter3FreqID)->load());
+        parametricEQModule.setParameter(ParametricEQ<float>::ParameterId::kFilter4Freq, treeState.getRawParameterValue(parametricFilter4FreqID)->load());
+    }
+
+    void updateTubeEQParameters()
+    {
+        tubeEQModule.setStereoType(static_cast<int>(treeState.getRawParameterValue(msID)->load()));
+        tubeEQModule.setParameter(TubeEQ<float>::ParameterId::kLowBoostGain, treeState.getRawParameterValue(tubeLowBoostID)->load());
+        tubeEQModule.setParameter(TubeEQ<float>::ParameterId::kLowCutGain, treeState.getRawParameterValue(tubeLowCutID)->load() * -1.0);
+        tubeEQModule.setParameter(TubeEQ<float>::ParameterId::kHighBoostGain, treeState.getRawParameterValue(tubeHighBoostID)->load());
+        tubeEQModule.setParameter(TubeEQ<float>::ParameterId::kHighCutGain, treeState.getRawParameterValue(tubeHighCutID)->load() * -1.0);
+        tubeEQModule.setParameter(TubeEQ<float>::ParameterId::kLowFilterFreq, treeState.getRawParameterValue(tubeLowFreqID)->load());
+        tubeEQModule.setParameter(TubeEQ<float>::ParameterId::kHighFilterFreq, treeState.getRawParameterValue(tubeHighFreqID)->load());
+        tubeEQModule.setParameter(TubeEQ<float>::ParameterId::kBandWidth, treeState.getRawParameterValue(tubeFilterBWID)->load());
+        tubeEQModule.setParameter(TubeEQ<float>::ParameterId::kDrive, treeState.getRawParameterValue(driveID)->load());
+    }
+
 private:
     
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
@@ -88,13 +129,10 @@ private:
     bool phaseToggle = false;
     
     GraphicEQ<float> graphicEQModule;
-    void updateGraphicParameters();
     
     ParametricEQ<float> parametricEQModule;
-    void updateParametricParameters();
     
     TubeEQ<float> tubeEQModule;
-    void updateTubeEQParameters();
     
     viator_dsp::SVFilter<float> hpFilter;
     viator_dsp::SVFilter<float> lpFilter;
