@@ -79,7 +79,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>/Users/land00m/Documents/GitHub/Viator-EQ/Builds/Mac/Multi-Q.component</string>
+															<string>/Users/land00m/Documents/GitHub/Viator-EQ/Builds/Mac/MultiQMacInstaller/Multi-Q.component</string>
 															<key>PATH_TYPE</key>
 															<integer>0</integer>
 															<key>PERMISSIONS</key>
@@ -616,7 +616,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>/Users/land00m/Documents/GitHub/Viator-EQ/Builds/Mac/Multi-Q.vst3</string>
+															<string>/Users/land00m/Documents/GitHub/Viator-EQ/Builds/Mac/MultiQMacInstaller/Multi-Q.vst3</string>
 															<key>PATH_TYPE</key>
 															<integer>0</integer>
 															<key>PERMISSIONS</key>

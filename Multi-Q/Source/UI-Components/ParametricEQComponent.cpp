@@ -33,6 +33,15 @@ ParametricEQComponent::ParametricEQComponent(MultiQAudioProcessor& p) : audioPro
     band2FreqDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter2FreqID, band2FreqDial);
     band3FreqDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter3FreqID, band3FreqDial);
     band4FreqDialAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, parametricFilter4FreqID, band4FreqDial);
+    
+    band1FreqDial.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::palevioletred.darker(1.0).darker(0.3));
+    band1FreqDial.forceShadow();
+    band2FreqDial.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::palevioletred.darker(1.0).darker(0.3));
+    band2FreqDial.forceShadow();
+    band3FreqDial.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::palevioletred.darker(1.0).darker(0.3));
+    band3FreqDial.forceShadow();
+    band4FreqDial.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::palevioletred.darker(1.0).darker(0.3));
+    band4FreqDial.forceShadow();
 }
 
 ParametricEQComponent::~ParametricEQComponent()
