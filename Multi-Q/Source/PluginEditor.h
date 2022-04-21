@@ -71,6 +71,7 @@ private:
     viator_gui::PushButton paraEQButton;
     viator_gui::PushButton tubeEQButton;
     viator_gui::Toggle phaseToggle {""};
+    viator_gui::PushButton resetButton;
     
     /** Attachments */
     std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> hpFaderAttach;

@@ -80,4 +80,14 @@ void MultiQAudioProcessorEditor::uiConstructor()
     addAndMakeVisible(tubeEQComponent);
     tubeEQComponent.setVisible(tubeEQButton.getToggleState());
     tubeEQComponent.setEnabled(tubeEQButton.getToggleState());
+    
+    addAndMakeVisible(resetButton);
+    resetButton.setClickingTogglesState(false);
+    resetButton.setButtonText("Reset");
+    resetButton.onClick = [this]()
+    {
+        graphicEQComponent.reset(graphicEQButton.getToggleState());
+        tubeEQComponent.reset(tubeEQButton.getToggleState());
+        parametricEQComponent.reset(paraEQButton.getToggleState());
+    };
 }

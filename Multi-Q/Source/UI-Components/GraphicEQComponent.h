@@ -24,6 +24,7 @@ public:
 
     void paint (juce::Graphics&) override;
     void resized() override;
+    void reset(bool shouldReset);
 
 private:
     

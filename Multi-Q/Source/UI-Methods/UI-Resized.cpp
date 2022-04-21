@@ -27,6 +27,7 @@ void MultiQAudioProcessorEditor::uiResized()
     // Tube EQ
     tubeEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
     
+    
     // Output
     auto leftOutputMargin = getWidth() * 0.64;
     auto topOutputMargin = getHeight() * 0.12;
@@ -34,6 +35,8 @@ void MultiQAudioProcessorEditor::uiResized()
     auto faderWidth = getWidth() * 0.065;
     auto buttonWidth = faderWidth * 1.3333;
     auto buttonheight = buttonWidth * 0.33;
+    
+    resetButton.setBounds(getWidth() * 0.25, getHeight() * 0.83, buttonWidth, buttonheight);
     
     // Highpass
     hpFader.setBounds(leftOutputMargin, topOutputMargin, faderWidth, faderheight);

@@ -103,5 +103,19 @@ void ParametricEQComponent::resized()
 
     band4FreqDial.setBounds(band4GainDial.getX(), band4GainDial.getY() + band4GainDial.getHeight() * 1.25, sliderSize, sliderSize);
     band4FreqLabel.setFont(juce::Font ("Helvetica", labelSize, juce::Font::FontStyleFlags::bold));
+}
 
+void ParametricEQComponent::reset(bool reset)
+{
+    if (reset)
+    {
+        band1GainDial.setValue(0.0);
+        band2GainDial.setValue(0.0);
+        band3GainDial.setValue(0.0);
+        band4GainDial.setValue(0.0);
+        band1FreqDial.setValue(200.0);
+        band2FreqDial.setValue(1000.0);
+        band3FreqDial.setValue(1000.0);
+        band4FreqDial.setValue(7000.0);
+    }
 }

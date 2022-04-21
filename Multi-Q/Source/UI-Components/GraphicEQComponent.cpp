@@ -114,3 +114,14 @@ void GraphicEQComponent::resized()
     band10.setBounds(band5.getX(), bottomMargin, faderWidth, faderheight);
     band10Label.setFont(juce::Font ("Helvetica", band1.getWidth() * 0.2f, juce::Font::FontStyleFlags::bold));
 }
+
+void GraphicEQComponent::reset(bool reset)
+{
+    if (reset)
+    {
+        for (auto& fader : faders)
+        {
+            fader->setValue(0.0);
+        }
+    }
+}

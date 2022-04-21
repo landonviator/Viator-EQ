@@ -100,3 +100,17 @@ void TubeEQComponent::resized()
     highFreqDial.setBounds(highBoostDial.getX() + (highBoostDial.getWidth() / 1.55), bandwidthDial.getY(), smallDialSize, smallDialSize);
     highFreqLabel.setFont(juce::Font ("Helvetica", labelSize, juce::Font::FontStyleFlags::bold));
 }
+
+void TubeEQComponent::reset(bool reset)
+{
+    if (reset)
+    {
+        lowBoostDial.setValue(0.0);
+        lowCutDial.setValue(0.0);
+        lowFreqDial.setValue(100.0);
+        highBoostDial.setValue(0.0);
+        highCutDial.setValue(0.0);
+        highFreqDial.setValue(5000.0);
+        bandwidthDial.setValue(5.0);
+    }
+}
