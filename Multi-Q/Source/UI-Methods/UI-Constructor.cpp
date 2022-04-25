@@ -21,10 +21,16 @@ void MultiQAudioProcessorEditor::uiConstructor()
     {
         addAndMakeVisible(faders[i]);
         addAndMakeVisible(labels[i]);
-        labels[i]->setText(labelTexts[i], juce::dontSendNotification);
+        //labels[i]->setText(labelTexts[i], juce::dontSendNotification);
         labels[i]->attachToComponent(faders[i], false);
         labels[i]->setJustificationType(juce::Justification::centred);
     }
+    
+    auto labelFont = getWidth() * 0.065 * 0.2;
+    hpFaderLabel.setFont(juce::Font ("Helvetica", labelFont, juce::Font::FontStyleFlags::bold));
+    lpFaderLabel.setFont(juce::Font ("Helvetica", labelFont, juce::Font::FontStyleFlags::bold));
+    driveFaderLabel.setFont(juce::Font ("Helvetica", labelFont, juce::Font::FontStyleFlags::bold));
+    trimFaderLabel.setFont(juce::Font ("Helvetica", labelFont, juce::Font::FontStyleFlags::bold));
     
     hpFaderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, highpassID, hpFader);
     lpFaderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, lowpassID, lpFader);

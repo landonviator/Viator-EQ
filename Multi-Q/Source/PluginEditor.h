@@ -67,9 +67,9 @@ private:
     viator_gui::Fader trimFader {" dB", "Trim", -12.0, 12.0, 0.01, 0.0};
     viator_gui::Label trimFaderLabel;
     
-    viator_gui::PushButton graphicEQButton;
-    viator_gui::PushButton paraEQButton;
-    viator_gui::PushButton tubeEQButton;
+    viator_gui::ToggleButton graphicEQButton;
+    viator_gui::ToggleButton paraEQButton;
+    viator_gui::ToggleButton tubeEQButton;
     viator_gui::Toggle phaseToggle {""};
     viator_gui::PushButton resetButton;
     

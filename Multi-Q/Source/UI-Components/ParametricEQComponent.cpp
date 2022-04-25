@@ -13,6 +13,14 @@
 
 //==============================================================================
 ParametricEQComponent::ParametricEQComponent(MultiQAudioProcessor& p) : audioProcessor(p)
+, band1Label(true, "Low Gain")
+, band2Label(true, "Mid Gain")
+, band3Label(true, "Mid Gain")
+, band4Label(true, "high Gain")
+, band1FreqLabel(true, "Low Freq")
+, band2FreqLabel(true, "Mid Freq")
+, band3FreqLabel(true, "Mid Freq")
+, band4FreqLabel(true, "high Freq")
 {
     using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
     
@@ -20,7 +28,6 @@ ParametricEQComponent::ParametricEQComponent(MultiQAudioProcessor& p) : audioPro
     {
         addAndMakeVisible(dials[i]);
         addAndMakeVisible(labels[i]);
-        labels[i]->setText(labelTexts[i], juce::dontSendNotification);
         labels[i]->attachToComponent(dials[i], false);
         labels[i]->setJustificationType(juce::Justification::centred);
     }

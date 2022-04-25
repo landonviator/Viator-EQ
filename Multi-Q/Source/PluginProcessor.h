@@ -115,8 +115,13 @@ public:
         tubeEQModule.setParameter(TubeEQ<float>::ParameterId::kBandWidth, treeState.getRawParameterValue(tubeFilterBWID)->load());
         tubeEQModule.setParameter(TubeEQ<float>::ParameterId::kDrive, treeState.getRawParameterValue(driveID)->load());
     }
+    
+    float getCPULoad();
 
 private:
+    
+    juce::AudioProcessLoadMeasurer cpuMeasureModule;
+    std::atomic<float> cpuLoad;
     
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     void parameterChanged (const juce::String& parameterID, float newValue) override;
@@ -137,6 +142,8 @@ private:
     viator_dsp::SVFilter<float> hpFilter;
     viator_dsp::SVFilter<float> lpFilter;
     juce::dsp::Gain<float> gainModule;
+    
+    int bufferSize;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultiQAudioProcessor)
 };

@@ -25,6 +25,8 @@ MultiQAudioProcessor::MultiQAudioProcessor()
 
 #endif
 {
+    cpuLoad.store(0.0f);
+    
     treeState.addParameterListener(graphicFilter1GainID, this);
     treeState.addParameterListener(graphicFilter2GainID, this);
     treeState.addParameterListener(graphicFilter3GainID, this);
@@ -66,6 +68,8 @@ MultiQAudioProcessor::MultiQAudioProcessor()
     
     treeState.addParameterListener(driveID, this);
     treeState.addParameterListener(trimID, this);
+    
+    treeState.addParameterListener("cpu", this);
 }
 
 MultiQAudioProcessor::~MultiQAudioProcessor()
@@ -112,6 +116,8 @@ MultiQAudioProcessor::~MultiQAudioProcessor()
     
     treeState.removeParameterListener(driveID, this);
     treeState.removeParameterListener(trimID, this);
+    
+    treeState.removeParameterListener("cpu", this);
 }
 
 juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::createParameterLayout()
@@ -160,6 +166,8 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     auto driveParam = std::make_unique<juce::AudioParameterFloat>(driveID, driveName, 0.0f, 20.0f, 0.0f);
     auto trimParam = std::make_unique<juce::AudioParameterFloat>(trimID, trimName, -24.0f, 24.0f, 0.0f);
     
+    auto pCPU = std::make_unique<juce::AudioParameterBool>("cpu", "CPU", true);
+    
     params.push_back(std::move(gF1));
     params.push_back(std::move(gF2));
     params.push_back(std::move(gF3));
@@ -201,6 +209,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     
     params.push_back(std::move(driveParam));
     params.push_back(std::move(trimParam));
+    params.push_back(std::move(pCPU));
     
     return { params.begin(), params.end() };
 }
@@ -221,6 +230,7 @@ void MultiQAudioProcessor::parameterChanged(const juce::String &parameterID, flo
             hpFilter.prepare(spec);
             lpFilter.prepare(spec);
             gainModule.prepare(spec);
+            cpuMeasureModule.reset(spec.sampleRate, bufferSize);
         }
 
         else
@@ -232,6 +242,7 @@ void MultiQAudioProcessor::parameterChanged(const juce::String &parameterID, flo
             hpFilter.prepare(spec);
             lpFilter.prepare(spec);
             gainModule.prepare(spec);
+            cpuMeasureModule.reset(spec.sampleRate, bufferSize);
         }
     }
     
@@ -316,12 +327,16 @@ void MultiQAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock
     if (osToggle)
     {
         spec.sampleRate = getSampleRate() * oversamplingModule.getOversamplingFactor();
+        cpuMeasureModule.reset(spec.sampleRate, samplesPerBlock);
     }
 
     else
     {
         spec.sampleRate = getSampleRate();
+        cpuMeasureModule.reset(spec.sampleRate, samplesPerBlock);
     }
+    
+    bufferSize = samplesPerBlock;
     
     // Initialize spec for dsp modules
     spec.maximumBlockSize = samplesPerBlock;
@@ -392,6 +407,8 @@ void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
     
     juce::dsp::AudioBlock<float> block (buffer);
     juce::dsp::AudioBlock<float> upSampledBlock (buffer);
+    
+    juce::AudioProcessLoadMeasurer::ScopedTimer s(cpuMeasureModule);
 
     // Oversample if ON
     if (osToggle)
@@ -426,6 +443,16 @@ void MultiQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
             viator_utils::utils::invertBlock(block);
         }
     }
+    
+    if (treeState.getRawParameterValue("cpu")->load())
+    {
+        cpuLoad.store(cpuMeasureModule.getLoadAsPercentage());
+    }
+}
+
+float MultiQAudioProcessor::getCPULoad()
+{
+    return cpuLoad.load();
 }
 
 //==============================================================================

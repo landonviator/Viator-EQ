@@ -22,7 +22,7 @@ void MultiQAudioProcessorEditor::initWindow()
     
     if (r.getWidth() <= 1440)
     {
-        width = x;
+        width = x * 0.65;
     }
     
     else
@@ -34,7 +34,7 @@ void MultiQAudioProcessorEditor::initWindow()
     
     //Making the window resizable by aspect ratio and setting size
     AudioProcessorEditor::setResizable(true, true);
-    AudioProcessorEditor::setResizeLimits(width * 0.5, height * 0.5, width * 1.25, height * 1.25);
+    AudioProcessorEditor::setResizeLimits(width * 0.75, height * 0.75, width * 1.25, height * 1.25);
     AudioProcessorEditor::getConstrainer()->setFixedAspectRatio(2.0);
     
     if (audioProcessor.windowWidth != 0.0)

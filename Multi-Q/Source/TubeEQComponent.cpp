@@ -13,6 +13,13 @@
 
 //==============================================================================
 TubeEQComponent::TubeEQComponent(MultiQAudioProcessor& p) : audioProcessor(p)
+, lowBoostLabel(true, "Low Boost")
+, lowCutLabel(true, "Low Cut")
+, lowFreqLabel(true, "Low Freq")
+, bandwidthLabel(true, "BW")
+, highBoostLabel(true, "High Boost")
+, highCutLabel(true, "High Cut")
+, highFreqLabel(true, "High Freq")
 {
     using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
     
@@ -20,7 +27,6 @@ TubeEQComponent::TubeEQComponent(MultiQAudioProcessor& p) : audioProcessor(p)
     {
         addAndMakeVisible(dials[i]);
         addAndMakeVisible(labels[i]);
-        labels[i]->setText(labelTexts[i], juce::dontSendNotification);
         labels[i]->attachToComponent(dials[i], false);
         labels[i]->setJustificationType(juce::Justification::centred);
     }

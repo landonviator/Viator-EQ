@@ -16,7 +16,9 @@ audioProcessor (p),
 windowComponent(audioProcessor),
 graphicEQComponent(audioProcessor),
 parametricEQComponent(audioProcessor),
-tubeEQComponent(audioProcessor)
+tubeEQComponent(audioProcessor),
+hpFaderLabel(true, "HP"), lpFaderLabel(true, "LP"), driveFaderLabel(true, "Drive"), trimFaderLabel(true, "Trim")
+, graphicEQButton(true, "Graphic"), paraEQButton(true, "Parametric"), tubeEQButton(true, "Tube")
 {
     uiConstructor();
 }

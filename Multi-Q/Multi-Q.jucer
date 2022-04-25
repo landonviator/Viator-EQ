@@ -4,6 +4,42 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Viator DSP">
   <MAINGROUP id="hgatCz" name="Multi-Q">
     <GROUP id="{5244337E-67A1-F4C5-25A2-8EC35329EDEC}" name="Source">
+      <GROUP id="{50E31D72-64D2-243F-C3FF-4518999CE62A}" name="Assets">
+        <FILE id="mTxaz3" name="Articulations_back.png" compile="0" resource="1"
+              file="Source/Assets/Articulations_back.png"/>
+        <FILE id="jSx63i" name="Articulations_decore.png" compile="0" resource="1"
+              file="Source/Assets/Articulations_decore.png"/>
+        <FILE id="iE4Efe" name="Articulations_line_1.png" compile="0" resource="1"
+              file="Source/Assets/Articulations_line_1.png"/>
+        <FILE id="LYr1bk" name="Articulations_line_2.png" compile="0" resource="1"
+              file="Source/Assets/Articulations_line_2.png"/>
+        <FILE id="oAn2lB" name="back_vu-meter_decore.png" compile="0" resource="1"
+              file="Source/Assets/back_vu-meter_decore.png"/>
+        <FILE id="Af6DK0" name="background.png" compile="0" resource="1" file="Source/Assets/background.png"/>
+        <FILE id="QsC7ru" name="btclipper.png" compile="0" resource="1" file="Source/Assets/btclipper.png"/>
+        <FILE id="TdQxVW" name="button_middle_off.png" compile="0" resource="1"
+              file="Source/Assets/button_middle_off.png"/>
+        <FILE id="Hr97ek" name="button_middle_on.png" compile="0" resource="1"
+              file="Source/Assets/button_middle_on.png"/>
+        <FILE id="ULWvOG" name="button_small_off.png" compile="0" resource="1"
+              file="Source/Assets/button_small_off.png"/>
+        <FILE id="T7iCgk" name="button_small_on.png" compile="0" resource="1"
+              file="Source/Assets/button_small_on.png"/>
+        <FILE id="Cihp09" name="knob_middle.png" compile="0" resource="1" file="Source/Assets/knob_middle.png"/>
+        <FILE id="j8NgHy" name="knob_small.png" compile="0" resource="1" file="Source/Assets/knob_small.png"/>
+        <FILE id="ZwxvZn" name="landon55-04.png" compile="0" resource="1" file="Source/Assets/landon55-04.png"/>
+        <FILE id="cSHgn3" name="led_off.png" compile="0" resource="1" file="Source/Assets/led_off.png"/>
+        <FILE id="X3MsCN" name="led_on.png" compile="0" resource="1" file="Source/Assets/led_on.png"/>
+        <FILE id="bJsFHh" name="pluginBackground2.png" compile="0" resource="1"
+              file="Source/Assets/pluginBackground2.png"/>
+        <FILE id="BEjFJz" name="projucer.png" compile="0" resource="1" file="Source/Assets/projucer.png"/>
+        <FILE id="ZVFoT1" name="scale_knob middle.png" compile="0" resource="1"
+              file="Source/Assets/scale_knob middle.png"/>
+        <FILE id="RaOPg2" name="scale_knob small_.png" compile="0" resource="1"
+              file="Source/Assets/scale_knob small_.png"/>
+        <FILE id="RC1PWB" name="slider_vertical.png" compile="0" resource="1"
+              file="Source/Assets/slider_vertical.png"/>
+      </GROUP>
       <GROUP id="{15B15F08-22BA-E8AC-BBAB-0D2466C2ACFB}" name="Parameters">
         <FILE id="boxGBr" name="Parameters.cpp" compile="1" resource="0" file="Source/Parameters/Parameters.cpp"/>
         <FILE id="bTZHa6" name="Parameters.h" compile="0" resource="0" file="Source/Parameters/Parameters.h"/>
@@ -39,20 +75,10 @@
         <FILE id="bhq06i" name="UI-SaveWindow.cpp" compile="1" resource="0"
               file="Source/UI-Methods/UI-SaveWindow.cpp"/>
       </GROUP>
-      <GROUP id="{2084F1C3-B299-FB83-B48A-DD0614BCA379}" name="Assets">
-        <FILE id="T95urM" name="dark_blue.png" compile="0" resource="1" file="Source/Assets/dark_blue.png"/>
-        <FILE id="jLUgI4" name="landon55-03.png" compile="0" resource="1" file="Source/Assets/landon55-03.png"/>
-        <FILE id="ekn6C1" name="landon55-04.png" compile="0" resource="1" file="Source/Assets/landon55-04.png"/>
-        <FILE id="c3gMuA" name="oscilloscope-01.png" compile="0" resource="1"
-              file="Source/Assets/oscilloscope-01.png"/>
-        <FILE id="ibzyxs" name="pluginBackground.png" compile="0" resource="1"
-              file="Source/Assets/pluginBackground.png"/>
-        <FILE id="iIS8oN" name="pluginBackground2.png" compile="0" resource="1"
-              file="Source/Assets/pluginBackground2.png"/>
-        <FILE id="cWzOVI" name="testTexture.png" compile="0" resource="1" file="Source/Assets/testTexture.png"/>
-        <FILE id="VBO2Fz" name="TEXTURE5.png" compile="0" resource="1" file="Source/Assets/TEXTURE5.png"/>
-      </GROUP>
       <GROUP id="{CE34EEC1-0872-E4B4-4BCC-60D6EDE88B9E}" name="UI-Components">
+        <FILE id="flmx3z" name="CPUComponent.cpp" compile="1" resource="0"
+              file="Source/UI-Components/CPUComponent.cpp"/>
+        <FILE id="kfSQbx" name="CPUComponent.h" compile="0" resource="0" file="Source/UI-Components/CPUComponent.h"/>
         <FILE id="Q4Rv6B" name="GraphicEQComponent.cpp" compile="1" resource="0"
               file="Source/UI-Components/GraphicEQComponent.cpp"/>
         <FILE id="fBoeIA" name="GraphicEQComponent.h" compile="0" resource="0"
