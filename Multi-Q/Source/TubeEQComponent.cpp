@@ -81,14 +81,13 @@ TubeEQComponent::~TubeEQComponent()
 
 void TubeEQComponent::paint (juce::Graphics& g)
 {
-    
 }
 
 void TubeEQComponent::resized()
 {
     auto leftMargin = 0;
     auto topMargin = 36;
-    auto dialSize = getHeight() * 0.4;
+    auto dialSize = getHeight() * 0.38;
     auto smallDialSize = dialSize * 0.85;
     auto spaceBetweenDials = 1.05;
     auto labelSize = dialSize * 0.08f;

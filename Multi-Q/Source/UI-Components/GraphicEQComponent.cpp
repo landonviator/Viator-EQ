@@ -87,7 +87,7 @@ void GraphicEQComponent::resized()
 {
     auto leftMargin = 12;
     auto topMargin = 24;
-    auto faderWidth = getWidth() * 0.1;
+    auto faderWidth = getWidth() * 0.11;
     auto faderheight = faderWidth * 2.35;
     auto spaceBetween = 1.85;
     auto labelFont = faderWidth * 0.16f;

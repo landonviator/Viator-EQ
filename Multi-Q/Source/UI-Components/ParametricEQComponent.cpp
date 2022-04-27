@@ -86,14 +86,13 @@ ParametricEQComponent::~ParametricEQComponent()
 
 void ParametricEQComponent::paint (juce::Graphics& g)
 {
-    
 }
 
 void ParametricEQComponent::resized()
 {
     auto leftMargin = 0;
     auto topMargin = 24;
-    auto sliderSize = getWidth() * 0.23;
+    auto sliderSize = getWidth() * 0.24;
     auto labelSize = sliderSize * 0.08f;
     
     band1GainDial.setBounds(leftMargin, topMargin, sliderSize, sliderSize);

@@ -19,13 +19,13 @@ void MultiQAudioProcessorEditor::uiResized()
     windowComponent.setBounds(getLocalBounds());
     
     // Graphic EQ Component
-    graphicEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    graphicEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.55, getHeight() * 0.7);
     
     // Parametric EQ
-    parametricEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    parametricEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.55, getHeight() * 0.7);
     
     // Tube EQ
-    tubeEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.6, getHeight() * 0.7);
+    tubeEQComponent.setBounds(leftMargin, topMargin, getWidth() * 0.55, getHeight() * 0.7);
     
     
     // Output
