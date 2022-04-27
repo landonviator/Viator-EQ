@@ -29,20 +29,274 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\
   include_juce_audio_devices.cpp
   include_juce_audio_formats.cpp
   include_juce_audio_plugin_client_utils.cpp
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\DSP\GraphicEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\DSP\GraphicEQ.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\GraphicEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\GraphicEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\DSP\GraphicEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(167): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Constructor.cpp(30,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Constructor.cpp(31,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Constructor.cpp(32,54): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Constructor.cpp(33,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
 C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+  include_juce_audio_processors.cpp
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Paint.cpp(13,58): warning C4100: 'g': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(25,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(30,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(37,93): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(37,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(37,64): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(37,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(42,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(42,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(47,25): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(17,42): warning C4100: 'g': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(24,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(27,75): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(27,64): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(27,56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(27,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(28,94): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(28,83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(29,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(29,81): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(51,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(51,86): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\PluginEditor.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(51,67): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(51,46): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.cpp(130): message : see reference to class template instantiation 'TubeEQ<float>' being compiled
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\Parameters\Parameters.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(56,98): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(56,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(56,62): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(56,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(74,73): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(74,62): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(74,53): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(74,33): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(75,87): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(75,76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(77,79): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(77,66): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(77,58): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(77,38): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(79,74): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(79,63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(79,55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(67,43): warning C4244: '=': conversion from 'double' to 'SampleType', possible loss of data
           with
           [
@@ -53,7 +307,9 @@ C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(51): messa
           [
               SampleType=float
           ] (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(79,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.cpp(130): message : see reference to class template instantiation 'TubeEQ<float>' being compiled
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(81,94): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(74,1): warning C4244: '*=': conversion from 'T' to 'SampleType', possible loss of data
           with
           [
@@ -63,14 +319,106 @@ C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(74,1): war
           [
               SampleType=float
           ] (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(81,83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(82,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(83,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(83,81): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(84,48): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-SaveWindow.cpp(22,46): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-SaveWindow.cpp(23,48): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(44,120): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(46,120): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(48,120): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(50,120): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(87,52): warning C4100: 'g': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(98,64): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(98,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(99,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(101,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(101,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(101,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(102,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(104,101): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(104,89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(105,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(107,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(107,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(107,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(108,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(110,101): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(110,89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(111,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(113,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(113,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(113,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(114,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(116,101): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(116,89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(117,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(119,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(119,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(119,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(120,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\TubeEQComponent.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=float
+          ] (compiling source file ..\..\Source\TubeEQComponent.cpp)
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
           with
           [
@@ -81,399 +429,15 @@ C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,1
           [
               SampleType=float
           ] (compiling source file ..\..\Source\UI-Components\GraphicEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\DSP\ParametricEQ.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(82,49): warning C4100: 'g': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(95,56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(95,44): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(96,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(98,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(98,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Components\ParametricEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(98,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(99,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(101,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(101,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(101,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(102,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(104,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(104,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(104,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(105,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(107,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\PluginEditor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(107,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(107,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(108,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\UI-SaveWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(112,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(112,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(112,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(113,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(115,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(115,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(115,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(116,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(118,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(118,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(118,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(119,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(121,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\Parameters\Parameters.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\DSP\ParametricEQ.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(121,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(121,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(122,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(124,62): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(124,50): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(124,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(125,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\ParametricEQ.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\ParametricEQ.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\UI-Constructor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Components\CPUComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\DSP\ParametricEQ.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.cpp(98): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(17,42): warning C4100: 'g': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(24,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  include_juce_audio_processors.cpp
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(27,75): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(27,64): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(27,56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(27,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(28,94): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(28,83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(29,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\CPUComponent.cpp(29,81): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(44,120): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(46,120): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(48,120): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(50,120): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Components\LV_Window.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-SaveWindow.cpp(22,46): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-SaveWindow.cpp(23,48): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(87,52): warning C4100: 'g': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(99,64): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(99,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(100,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(102,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(102,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(102,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(103,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(105,101): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(105,89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(106,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(108,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(108,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(108,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(109,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(111,101): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(111,89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(112,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\DSP\GraphicEQ.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(114,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(114,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(114,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(115,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(117,101): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(117,89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(118,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(120,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(120,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(120,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\ParametricEQComponent.cpp(121,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\TubeEQComponent.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Constructor.cpp(30,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(51,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Constructor.cpp(31,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(51,86): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Constructor.cpp(32,54): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(51,67): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Constructor.cpp(33,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(51,46): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(56,98): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(56,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(56,62): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(56,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(74,73): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(74,62): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(74,53): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(74,33): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(75,87): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(75,76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(77,79): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(77,66): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(77,58): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(77,38): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(79,74): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(79,63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(79,55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(79,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(81,94): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(81,83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(82,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(83,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(83,81): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\LV_Window.cpp(84,48): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\UI-Resized.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\DSP\GraphicEQ.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\UI-InitWindow.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(42,118): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(44,119): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(47,102): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\GraphicEQ.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\GraphicEQ.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(82,46): warning C4100: 'g': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(96,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(96,51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(97,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(99,114): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(99,104): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(99,46): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(100,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\UI-Paint.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(102,113): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(102,103): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(102,47): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(103,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\DSP\GraphicEQ.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(167): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(105,117): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(105,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(105,48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(106,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(108,152): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(108,137): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(108,103): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(108,47): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(109,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(111,115): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(111,100): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(111,48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(112,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(114,123): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(114,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(114,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(115,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(22,87): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(22,88): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(22,68): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(22,46): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(22,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(25,90): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(25,91): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(25,71): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(25,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(25,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(28,84): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(28,85): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(28,65): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(28,43): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(28,31): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
@@ -489,24 +453,16 @@ C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.c
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(48,89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(48,77): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(48,60): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(33,1): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Source\DSP\ParametricEQ.cpp)
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(49,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(52,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(52,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(25,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(30,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(52,63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(37,93): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(53,54): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(37,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(37,64): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(56,97): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(37,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(56,85): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(56,68): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(42,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(42,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(57,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-InitWindow.cpp(47,25): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(60,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(60,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(60,65): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
@@ -516,39 +472,193 @@ C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.c
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(62,148): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(62,135): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Resized.cpp(62,93): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Methods\UI-Paint.cpp(13,58): warning C4100: 'g': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(42,118): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(44,119): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(47,102): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(217,84): warning C4100: 'newValue': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(304,51): warning C4100: 'index': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(308,62): warning C4100: 'index': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(313,78): warning C4100: 'newName': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(313,51): warning C4100: 'index': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(82,46): warning C4100: 'g': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(95,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(95,51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(96,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(98,114): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(98,104): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(98,46): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(99,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(101,113): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(101,103): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(101,47): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(102,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(104,117): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(104,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(449,59): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(104,48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(105,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(404,94): warning C4100: 'midiMessages': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(107,152): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(107,137): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(107,103): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(107,47): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(108,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(110,115): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(110,100): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(110,48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(111,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(113,123): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(113,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(113,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\TubeEQComponent.cpp(114,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\Fader.h(52,56): warning C4100: 'event': unreferenced formal parameter (compiling source file ..\..\Source\DSP\ParametricEQ.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(24,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\ParametricEQ.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_gui\Widgets\PushButton.h(28,1): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Source\DSP\ParametricEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(82,49): warning C4100: 'g': unreferenced formal parameter
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(95,56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(95,44): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\DSP\ParametricEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.cpp(98): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(96,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(98,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(98,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(98,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(99,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(101,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(101,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(101,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(102,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(104,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(104,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(104,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(105,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(107,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(107,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(107,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(108,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(112,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(112,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(112,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(113,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(115,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(115,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(115,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(116,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(118,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(118,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(118,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(119,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(121,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(121,49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(121,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(122,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(124,62): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(124,50): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(124,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\UI-Components\GraphicEQComponent.cpp(125,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(12,30): warning C4244: '=': conversion from 'const double' to 'float', possible loss of data
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(11): message : while compiling class template member function 'void GraphicEQ<float>::prepare(const juce::dsp::ProcessSpec &)'
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(167): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(98,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
           with
           [
-              SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
-          with
+              SampleType=double
+          ]
+          and
           [
               SampleType=float
-          ] (compiling source file ..\..\Source\UI-Methods\OversamplingMenu.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.h(62,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(136): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.h(54,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(138): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(105,1): warning C4305: 'initializing': truncation from 'double' to 'const float' (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(140): message : see reference to class template instantiation 'TubeEQ<float>' being compiled (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(110,129): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(94): message : while compiling class template member function 'void GraphicEQ<double>::setParameter(GraphicEQ<double>::ParameterId,SampleType)'
           with
           [
-              SampleType=float
-          ] (compiling source file ..\..\Source\PluginProcessor.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.h(112,131): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
+              SampleType=double
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(99,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
           with
           [
+              SampleType=double
+          ]
+          and
+          [
               SampleType=float
-          ] (compiling source file ..\..\Source\PluginProcessor.cpp)
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(100,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
+          and
+          [
+              SampleType=float
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(101,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
+          and
+          [
+              SampleType=float
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(102,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
+          and
+          [
+              SampleType=float
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(103,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
+          and
+          [
+              SampleType=float
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(104,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
+          and
+          [
+              SampleType=float
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(105,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
+          and
+          [
+              SampleType=float
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(106,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
+          and
+          [
+              SampleType=float
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(107,74): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
+          and
+          [
+              SampleType=float
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(108,61): warning C4244: '=': conversion from 'SampleType' to 'float', possible loss of data
+          with
+          [
+              SampleType=double
+          ]
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.cpp(13,30): warning C4244: '=': conversion from 'const double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.cpp(12): message : while compiling class template member function 'void TubeEQ<float>::prepare(const juce::dsp::ProcessSpec &)'
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.cpp(61,66): warning C4244: 'argument': conversion from 'double' to 'SampleType', possible loss of data
@@ -658,14 +768,6 @@ C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.cpp(89,61): 
           [
               SampleType=double
           ]
-  include_juce_audio_utils.cpp
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(217,84): warning C4100: 'newValue': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(304,51): warning C4100: 'index': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(308,62): warning C4100: 'index': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(313,78): warning C4100: 'newName': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(313,51): warning C4100: 'index': unreferenced formal parameter
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(449,59): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\PluginProcessor.cpp(404,94): warning C4100: 'midiMessages': unreferenced formal parameter
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.cpp(12,30): warning C4244: '=': conversion from 'const double' to 'float', possible loss of data
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.cpp(11): message : while compiling class template member function 'void ParametricEQ<float>::prepare(const juce::dsp::ProcessSpec &)'
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.cpp(98): message : see reference to class template instantiation 'ParametricEQ<float>' being compiled
@@ -751,125 +853,7 @@ C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\ParametricEQ.cpp(57
           [
               SampleType=double
           ]
-C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(12,28): warning C4244: 'return': conversion from 'double' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ] (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.cpp(85): message : see reference to function template instantiation 'T viator_utils::utils::dbToGain<SampleType>(T,T)' being compiled
-          with
-          [
-              T=float,
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.cpp(48): message : while compiling class template member function 'void TubeEQ<float>::setParameter(TubeEQ<float>::ParameterId,SampleType)'
-          with
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(12,30): warning C4244: '=': conversion from 'const double' to 'float', possible loss of data
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(11): message : while compiling class template member function 'void GraphicEQ<float>::prepare(const juce::dsp::ProcessSpec &)'
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(167): message : see reference to class template instantiation 'GraphicEQ<float>' being compiled
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(98,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-          and
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(94): message : while compiling class template member function 'void GraphicEQ<double>::setParameter(GraphicEQ<double>::ParameterId,SampleType)'
-          with
-          [
-              SampleType=double
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(99,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-          and
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(100,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-          and
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(101,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-          and
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(102,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-          and
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(103,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-          and
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(104,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-          and
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(105,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-          and
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(106,72): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-          and
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(107,74): warning C4244: 'argument': conversion from 'SampleType' to 'SampleType', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
-          and
-          [
-              SampleType=float
-          ]
-C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\GraphicEQ.cpp(108,61): warning C4244: '=': conversion from 'SampleType' to 'float', possible loss of data
-          with
-          [
-              SampleType=double
-          ]
+  include_juce_audio_utils.cpp
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3416,56): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
           with
           [
@@ -936,6 +920,22 @@ C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_dsp\svfilter.h(1
           [
               SampleType=float
           ] (compiling source file ..\..\Source\PluginProcessor.cpp)
+C:\Users\lando\Documents\GitHub\viatordsp\viator_modules\viator_utils\utils.h(12,28): warning C4244: 'return': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ] (compiling source file ..\..\Source\DSP\TubeEQ.cpp)
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.cpp(85): message : see reference to function template instantiation 'T viator_utils::utils::dbToGain<SampleType>(T,T)' being compiled
+          with
+          [
+              T=float,
+              SampleType=float
+          ]
+C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.cpp(48): message : while compiling class template member function 'void TubeEQ<float>::setParameter(TubeEQ<float>::ParameterId,SampleType)'
+          with
+          [
+              SampleType=float
+          ]
 C:\Users\lando\Documents\GitHub\Viator-EQ\Multi-Q\Source\DSP\TubeEQ.h(67,43): warning C4244: '=': conversion from 'double' to 'SampleType', possible loss of data
           with
           [
