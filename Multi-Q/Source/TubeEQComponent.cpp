@@ -33,11 +33,11 @@ TubeEQComponent::TubeEQComponent(MultiQAudioProcessor& p) : audioProcessor(p)
     
     lowBoostAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeLowBoostID, lowBoostDial);
     lowCutAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeLowCutID, lowCutDial);
+    lowFreqAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeLowFreqID, lowFreqDial);
+    bandwidthAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeFilterBWID, bandwidthDial);
     highBoostAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeHighBoostID, highBoostDial);
     highCutAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeHighCutID, highCutDial);
-    lowFreqAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeLowFreqID, lowFreqDial);
     highFreqAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeHighFreqID, highFreqDial);
-    bandwidthAttach = std::make_unique<SliderAttachment>(audioProcessor.treeState, tubeFilterBWID, bandwidthDial);
     
     lowFreqDial.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::palevioletred.darker(1.0).darker(0.3));
     lowFreqDial.forceShadow();

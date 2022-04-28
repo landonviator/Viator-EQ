@@ -150,7 +150,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout MultiQAudioProcessor::create
     auto tHC = std::make_unique<juce::AudioParameterFloat>(tubeHighCutID, tubeHighCutName, 0.0f, 10.0f, 0.0f);
     auto tLF = std::make_unique<juce::AudioParameterFloat>(tubeLowFreqID, tubeLowFreqName, 20.0f, 300.0f, 100.0f);
     auto tHF = std::make_unique<juce::AudioParameterFloat>(tubeHighFreqID, tubeHighFreqName, 1000.0f, 16000.0f, 5000.0f);
-    auto tBW = std::make_unique<juce::AudioParameterFloat>(tubeFilterBWID, tubeFilterBWName, 0.0f, 10.0f, 5.0f);
+    auto tBW = std::make_unique<juce::AudioParameterFloat>(tubeFilterBWID, tubeFilterBWName, 0.0f, 10.0f, 0.0f);
     
     auto gON = std::make_unique<juce::AudioParameterBool>(graphicEQONID, graphicEQONName, true);
     auto pON = std::make_unique<juce::AudioParameterBool>(paraEQONID, paraEQONName, false);

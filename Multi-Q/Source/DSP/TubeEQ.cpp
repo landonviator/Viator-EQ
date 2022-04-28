@@ -23,24 +23,28 @@ void TubeEQ<SampleType>::prepare(const juce::dsp::ProcessSpec& spec)
     lowBoostFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kLowShelf);
     lowBoostFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 100);
     lowBoostFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
+    lowBoostFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQ, 0.1f);
     
     lowCutFilter.prepare(spec);
     lowCutFilter.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     lowCutFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     lowCutFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 200);
     lowCutFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
+    lowCutFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQ, 0.1f);
     
     highBoostFilter.prepare(spec);
     highBoostFilter.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     highBoostFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kHighShelf);
     highBoostFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 5000);
     highBoostFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
+    highBoostFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQ, 0.1f);
     
     highCutFilter.prepare(spec);
     highCutFilter.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     highCutFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
     highCutFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 2500);
     highCutFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
+    highCutFilter.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQ, 0.1f);
 }
 
 template <typename SampleType>
@@ -71,12 +75,13 @@ void TubeEQ<SampleType>::setParameter(ParameterId parameter, SampleType paramete
             
         case ParameterId::kBandWidth:
         {
-            auto newQ = juce::jmap(static_cast<float>(parameterValue), 0.0f, 10.0f, 0.05f, 0.95f);
+            auto newQ = juce::jmap(static_cast<float>(parameterValue), 0.0f, 10.0f, 0.1f, 0.7f);
             
             lowBoostFilter.setParameter(f::kQ, newQ);
             lowCutFilter.setParameter(f::kQ, newQ);
             highBoostFilter.setParameter(f::kQ, newQ);
             highCutFilter.setParameter(f::kQ, newQ);
+            break;
         }
             
         case ParameterId::kDrive:

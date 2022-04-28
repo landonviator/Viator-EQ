@@ -26,11 +26,13 @@ void ParametricEQ<SampleType>::prepare(const juce::dsp::ProcessSpec& spec)
     filter2.prepare(spec);
     filter2.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter2.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter2.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
     filter2.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 1000);
     
     filter3.prepare(spec);
     filter3.setStereoType(viator_dsp::SVFilter<float>::StereoId::kStereo);
     filter3.setParameter(viator_dsp::SVFilter<float>::ParameterId::kType, viator_dsp::SVFilter<float>::FilterType::kBandShelf);
+    filter3.setParameter(viator_dsp::SVFilter<float>::ParameterId::kQType, viator_dsp::SVFilter<float>::QType::kParametric);
     filter3.setParameter(viator_dsp::SVFilter<float>::ParameterId::kCutoff, 1000);
     
     filter4.prepare(spec);
